@@ -1,0 +1,119 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{1. Stegreifaufgabe aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q11/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{} \\  \datum{}}
+\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+\vspace{1cm}
+
+\Aufgabe{1:}
+    Die Abbildung zeigt modelhaft ein Gebäudekomplex, der auf einer horizontalen Fläche steht.
+\begin{enumerate}[label={\alph*)}]
+\item Bestimmen Sie die Koordinaten von $A, C, D, E$ und $F$.
+\item Berechnen Sie die Gleichung der Ebene $ABC$ in Normalenform.
+\item Geben Sie die Gleichung der Geraden $BF$ an.
+\item Berechnen Sie die Koordinaten des Punktes $B$. 
+\item Senkrecht über den Punkt F wird am Dach ein Fünfzig Zentimeter hoher Wetterhahn angebracht. Berechnen Sie, welchen Abstand hat er von der Ebene $ABC$.
+\item Als Dachtraufe wird die Tropfkante eines Gebäudes bezeichnet. An der Traufe befindet sich eine Dachrinne. Damit das Regenwasser gut abfließen kann, soll der Neigungswinkel der Dachoberfläche mindestens $120°$ betragen. Überprüfen Sie rechnerisch, ob der Gebäudekomplex diese Bedingung erfüllt. 
+
+\end{enumerate}
+
+\begin{flushright}15BE \end{flushright}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
