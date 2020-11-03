@@ -20,6 +20,17 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 %\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
 
 \pagenumbering{gobble}
 
@@ -100,17 +111,50 @@ Name: \underline{\hspace{7cm}}
    Bestimmen Sie in der Teilaufgabe a), b) und c) jeweils die Ableitungsfunktion:
  \begin{enumerate}[label={\alph*)}]
 \item $f(x)=-2x^3-\frac{1}{3}x^2+2x-\frac{7}{2}$  
+  \vspace{3cm}
 \item $g(a)=3a^3x^2+x+\frac{1}{a^2}$
+  \vspace{3cm}
 \item $h(x)=\frac {\frac{1}{3}x^4 - 3x^2}{x^2+2}$
+  \vspace{5cm}
 \item Geben Sie die Gleichung eine möglichen Stammfunktion $F$ von $f$.
+  \vspace{3cm}
  \item Vereinfachen Sie den Nenner und den Zähler der Funktion $h'(x)$ so weit, wie möglich.
 \end{enumerate}
 
 \begin{flushright}8BE \end{flushright}
+\begin{flushright}Bitte wenden\end{flushright}
+
+\newpage
 
 \Aufgabe{2:}
 
-Gegeben ist der gezeichnete Graph einer ganzrationalen Funktion $f$ (Bild1)
+Gegeben ist der gezeichnete Graph einer ganzrationalen Funktion $f$ (Bild 1)
+
+\begin{figure}[!h]
+  \centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.275044326241156,
+xmax=2.8734485815603117,
+ymin=-1.732567361219789,
+ymax=2.547397177787344,
+xtick={-2,-1,...,2},
+ytick={-1,0,...,2},]
+\clip(-2.275044326241156,-1.732567361219789) rectangle (2.8734485815603117,2.547397177787344);
+\draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.275044326241156:2.8734485815603117] plot(\x,{(\x)^(3)-2*(\x)^(2)-(\x)+1});
+\begin{scriptsize}
+\draw[color=ccqqqq] (-0.9498670212766045,-1.4863350917162403) node {$f$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+  \label{f1}
+  \caption*{Bild 1}
+\end{figure}
+
 \begin{enumerate}[label={\alph*)}]
 \item Skizzieren Sie zum gegebenen Graph der Funktion $f$  die zugehörige Ableitungsfunktion $f'$ (direkt im gegebenen Koordinatensystem) 
 \item Betrachten Sie jetzt die weitere Bilder: Bild 2, Bild 3 und Bild 4. Welcher der dort dargestellten Graphen kann der Graph der Stammfunktion F von f sein?
@@ -119,8 +163,81 @@ Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunk
 
 \end{enumerate}
 
+\begin{figure}[H]
+  \centering
+
+    \subfloat[Bild 2]{
+      \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+              \begin{axis}[
+              x=1cm,y=1cm,
+              axis lines=middle,
+              ymajorgrids=true,
+              xmajorgrids=true,
+              xmin=-2.3019060283688253,
+              xmax=2.9719414893617393,
+              ymin=-1.8310602690212177,
+              ymax=2.4489042699859294,
+              xtick={-2,-1,...,2},
+              ytick={-1,0,...,2},]
+              \clip(-2.3019060283688253,-1.8310602690212177) rectangle (2.9719414893617393,2.4489042699859294);
+              \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.3019060283688253:2.9719414893617393] plot(\x,{0-(1/4)*(\x)^(4)+2/3*(\x)^(3)-1/2*(\x)^(2)+(\x)});
+              \begin{scriptsize}
+              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$f$};
+              \end{scriptsize}
+              \end{axis}
+        \end{tikzpicture}
+    }
+    \subfloat[Bild 3]{
+
+          \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+          \begin{axis}[
+          x=1cm,y=1cm,
+          axis lines=middle,
+          ymajorgrids=true,
+          xmajorgrids=true,
+          xmin=-2.301906028368825,
+          xmax=2.9719414893617384,
+          ymin=-1.831060269021217,
+          ymax=2.4489042699859294,
+          xtick={-2,-1,...,2},
+          ytick={-1,0,...,2},]
+          \clip(-2.301906028368825,-1.831060269021217) rectangle (2.9719414893617384,2.4489042699859294);
+          \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:2.9719414893617384] plot(\x,{1/4*(\x)^(4)-2/3*(\x)^(3)-1/2*(\x)^(2)+(\x)});
+          \begin{scriptsize}
+          \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$f$};
+          \end{scriptsize}
+          \end{axis}
+          \end{tikzpicture}
 
 
+    }      %<------------
+    \subfloat[Bild 4]{
+
+        \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \begin{axis}[
+        x=1cm,y=1cm,
+        axis lines=middle,
+        ymajorgrids=true,
+        xmajorgrids=true,
+        xmin=-2.6600620567376185,
+        xmax=2.488430851063855,
+        ymin=-2.13549289313469,
+        ymax=2.144471645872449,
+        xtick={-2,-1,...,2},
+        ytick={-1,0,...,2},]
+        \clip(-2.6600620567376185,-2.13549289313469) rectangle (2.488430851063855,2.144471645872449);
+        \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.6600620567376185:2.488430851063855] plot(\x,{0-(\x)^(3)-2*(\x)^(2)+(\x)+1});
+        \begin{scriptsize}
+        \draw[color=ccqqqq] (-2.4003989361702396,2.0594095891348596) node {$f$};
+        \end{scriptsize}
+        \end{axis}
+        \end{tikzpicture}
+
+
+    }
+
+
+\end{figure}
 
 
 \begin{flushright}8BE \end{flushright}
