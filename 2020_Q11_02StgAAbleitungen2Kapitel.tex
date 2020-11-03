@@ -116,9 +116,9 @@ Name: \underline{\hspace{7cm}}
   \vspace{3cm}
 \item $h(x)=\frac {\frac{1}{3}x^4 - 3x^2}{x^2+2}$
   \vspace{5cm}
-\item Geben Sie die Gleichung eine möglichen Stammfunktion $F$ von $f$.
+\item Geben Sie die Gleichung einer möglichen Stammfunktion $F$ von $f$ an.
   \vspace{3cm}
- \item Vereinfachen Sie den Nenner und den Zähler der Funktion $h'(x)$ so weit, wie möglich.
+ \item Vereinfachen Sie den Nenner und den Zähler der Funktion $h'(x)$ soweit wie möglich.
 \end{enumerate}
 
 \begin{flushright}8BE \end{flushright}
@@ -156,10 +156,10 @@ ytick={-1,0,...,2},]
 \end{figure}
 
 \begin{enumerate}[label={\alph*)}]
-\item Skizzieren Sie zum gegebenen Graph der Funktion $f$  die zugehörige Ableitungsfunktion $f'$ (direkt im gegebenen Koordinatensystem) 
-\item Betrachten Sie jetzt die weitere Bilder: Bild 2, Bild 3 und Bild 4. Welcher der dort dargestellten Graphen kann der Graph der Stammfunktion F von f sein?
-Begründen Sie Ihre Entscheidung anhand von zwei verschiedenen Eigenschaften!
-Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunktion von f darstellen können!
+\item Skizzieren Sie zum gegebenen Graphen der Funktion $f$  die zugehörige Ableitungsfunktion $f'$ (direkt im gegebenen Koordinatensystem) 
+\item Betrachten Sie jetzt die weiteren Bilder: Bild 2, Bild 3 und Bild 4. Welcher der dort dargestellten Graphen kann der Graph der Stammfunktion F von f sein?
+Begründen Sie Ihre Entscheidung anhand von zwei verschiedenen Eigenschaften.
+Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunktion von f darstellen können.
 
 \end{enumerate}
 
@@ -180,9 +180,9 @@ Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunk
               xtick={-2,-1,...,2},
               ytick={-1,0,...,2},]
               \clip(-2.3019060283688253,-1.8310602690212177) rectangle (2.9719414893617393,2.4489042699859294);
-              \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.3019060283688253:2.9719414893617393] plot(\x,{0-(1/4)*(\x)^(4)+2/3*(\x)^(3)-1/2*(\x)^(2)+(\x)});
+              \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.3019060283688253:2.9719414893617393] plot(\x,{(\x)^(4)-(\x)^(3)-1/2*(\x)^(2)+(\x)});
               \begin{scriptsize}
-              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$f$};
+              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$$};
               \end{scriptsize}
               \end{axis}
         \end{tikzpicture}
@@ -204,7 +204,7 @@ Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunk
           \clip(-2.301906028368825,-1.831060269021217) rectangle (2.9719414893617384,2.4489042699859294);
           \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:2.9719414893617384] plot(\x,{1/4*(\x)^(4)-2/3*(\x)^(3)-1/2*(\x)^(2)+(\x)});
           \begin{scriptsize}
-          \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$f$};
+          \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
           \end{scriptsize}
           \end{axis}
           \end{tikzpicture}
@@ -228,7 +228,7 @@ Geben Sie jeweils einen Grund an, warum die übrigen Graphen nicht die Stammfunk
         \clip(-2.6600620567376185,-2.13549289313469) rectangle (2.488430851063855,2.144471645872449);
         \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.6600620567376185:2.488430851063855] plot(\x,{0-(\x)^(3)-2*(\x)^(2)+(\x)+1});
         \begin{scriptsize}
-        \draw[color=ccqqqq] (-2.4003989361702396,2.0594095891348596) node {$f$};
+        \draw[color=ccqqqq] (-2.4003989361702396,2.0594095891348596) node {$$};
         \end{scriptsize}
         \end{axis}
         \end{tikzpicture}
