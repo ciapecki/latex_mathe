@@ -174,7 +174,7 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
               ymax=5.4489042699859294,
               xtick={-3,-2,...,4,5},
               ytick={-2,-1,...,4,5},]
-              \clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
+              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
               \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-1.9183806146572397:2.1526595744681156] plot(\x,{2*(\x)^(3)+0.5*(\x)^2});
               \begin{scriptsize}
               \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$$};
@@ -196,7 +196,7 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
               ymax=5.4489042699859294,
               xtick={-3,-2,...,4,5},
               ytick={-2,-1,...,4,5},]
-              \clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
+              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
           \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:4.9719414893617384] plot(\x,{-1/10*(\x)^(5)+3/8*(\x)^(4)+(\x)});
           \begin{scriptsize}
           \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
@@ -208,36 +208,34 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
     }      %<------------
 \end{figure}
 
+
 \begin{figure}[H]
   \centering
-    \subfloat[Bild 3]{
 
-        \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-        \begin{axis}[
-        x=1cm,y=1cm,
-        axis lines=middle,
-        ymajorgrids=true,
-        xmajorgrids=true,
+    \subfloat[Bild 3]{
+      \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+              \begin{axis}[
+              x=1cm,y=1cm,
+              axis lines=middle,
+              ymajorgrids=true,
+              xmajorgrids=true,
               xmin=-3.3019060283688253,
               xmax=5.9719414893617393,
               ymin=-2.8310602690212177,
               ymax=5.4489042699859294,
               xtick={-3,-2,...,4,5},
               ytick={-2,-1,...,4,5},]
-              \clip(-3.9183806146572397,-3.177277763111059) rectangle (6.1526595744681156,5.299672591498936);
+              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.99,5.299672591498936);
         \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-3.6600620567376185:4.488430851063855] plot(\x,{-0.5*(\x)^(4)+1.5*(\x)^3});
-        \begin{scriptsize}
-        \draw[color=ccqqqq] (-2.4003989361702396,5.0594095891348596) node {$$};
-        \end{scriptsize}
-        \end{axis}
+              \begin{scriptsize}
+              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$$};
+              \end{scriptsize}
+              \end{axis}
         \end{tikzpicture}
-
-
     }
+    \subfloat[Bild 4]{
 
- \subfloat[Bild 4]{
-
-          \begin{tikzpicture}[scale=0.9 line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+          \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
           \begin{axis}[
           x=1cm,y=1cm,
           axis lines=middle,
@@ -249,7 +247,7 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
               ymax=5.4489042699859294,
               xtick={-3,-2,...,4,5},
               ytick={-2,-1,...,4,5},]
-              \clip(-3.9183806146572397,-3.177277763111059) rectangle (6.1526595744681156,5.299672591498936);
+              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
           \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:2.9719414893617384] plot(\x,{-2*(\x)^(3)+1/2*(\x)^(2)});
           \begin{scriptsize}
           \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
@@ -258,8 +256,7 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
           \end{tikzpicture}
 
 
-    }  %<-------------------------
-
+    }      %<------------
 \end{figure}
 
 %\begin{flushright}7BE \end{flushright}
