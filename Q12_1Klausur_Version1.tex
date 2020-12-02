@@ -1,0 +1,327 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{1. Klausur aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q12/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+%\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+\lhead{\sf \large \Fach{} %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{}   \datum{}}
+%\rhead{\sf \Semester{} }
+\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+\vspace{0,5cm}Die Rechenwege müssen nachvollziehbar sein!
+
+\vspace{0,5cm} {TEIL A} - ohne Hilfsmittel - Bearbeitungszeit 30 Minuten
+
+\vspace{0,5cm} GEOMETRIE
+
+\Aufgabe{1}
+
+Gegeben sind die Punkte $A (0|0|0)$ und $ C (5|3|4)$ sowie die Gerade
+
+\[
+       g: \vec{X} = \begin{pmatrix}10 \\ -3 \\-4 \end{pmatrix} 
+                  + \lambda \begin{pmatrix}5 \\ -3 \\-4 \end{pmatrix}          
+\] 
+$(\lambda \in \mathbb{R})$
+
+\begin{enumerate}[label={\alph*)}]
+\item Zeigen Sie, dass $ g$  eine Mittelsenkrechte von A und C ist.
+\item  Die Punkte A und C bilden zusammen mit zwei auf g liegenden Punkten das Quadrat
+ $ABCD$. Bestimmen Sie die Koordinaten von B und D.
+\end{enumerate}
+
+
+\vspace{0,5cm} ANALYSIS
+
+\Aufgabe{1:}
+Berechnen Sie die unbestimmten Integrale:
+
+\begin{enumerate}[label={\alph*)}]
+  \item $ \int \frac{2x^2}{3x^3-3} dx $
+    %\vspace{2,5cm}
+  \item $ \int -4xe^{x^2+5} dx $
+  %  \vspace{2,5cm}
+  %\vspace{1cm}
+\end{enumerate}
+\Aufgabe{2:}
+Welche Werte kann $ b \in R$ annehmen, damit folgende Gleichung stimmt? Begründen Sie kurz geometrisch!
+
+ $ \int_ {-3}^{b} x^5 dx $
+
+\Aufgabe{3:}
+
+Gegeben sind die Schaubilder der Funktion $f: x \rightarrow 0,5x^2  e^{0,5x}$ , der zugehörigen Ableitungsfunktion $f'(x)$ sowie einer möglichen Stammfunktion F(x) von f(x).
+
+\begin{figure}[!h]
+  \centering
+\begin{tikzpicture}[scale=1.2, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.275044326241156,
+xmax=2.8734485815603117,
+ymin=-1.732567361219789,
+ymax=2.547397177787344,
+xtick={-2,-1,...,2},
+ytick={-1,0,...,2},]
+\clip(-2.275044326241156,-1.732567361219789) rectangle (2.8734485815603117,2.547397177787344);
+\draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.275044326241156:2.8734485815603117] plot(\x,{(0.5*(\x)^2*e^0.5*(\x) });
+\begin{scriptsize}
+\draw[color=ccqqqq] (-0.9498670212766045,-1.4863350917162403) node {$f$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+  \label{f1}
+  \caption*{Bild 1}
+\end{figure}
+
+\begin{enumerate}[label={\alph*)}]
+\item Skizzieren Sie zum gegebenen Graphen der Funktion $f$  die zugehörige Ableitungsfunktion $f'$ (direkt im gegebenen Koordinatensystem) 
+\item Betrachten Sie jetzt die weiteren Bilder: Bild 2, Bild 3 und Bild 4. Welcher der dort dargestellten Graphen kann der Graph der Stammfunktion F von f sein?
+Begründen Sie Ihre Entscheidung anhand von zwei verschiedenen Eigenschaften.
+
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+
+    \subfloat[Bild 2]{
+      \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+              \begin{axis}[
+              x=1cm,y=1cm,
+              axis lines=middle,
+              ymajorgrids=true,
+              xmajorgrids=true,
+              xmin=-2.3019060283688253,
+              xmax=2.9719414893617393,
+              ymin=-1.8310602690212177,
+              ymax=2.4489042699859294,
+              xtick={-2,-1,...,2},
+              ytick={-1,0,...,2},]
+%              \clip(-2.3019060283688253,-1.8310602690212177) rectangle (2.9719414893617393,2.4489042699859294);
+%              \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.3019060283688253:2.9719414893617393] plot(\x,{(\x)^(4)-(\x)^(3)-1/2*(\x)^(2)+(\x)});
+
+              \clip(-1.9183806146572397,-2.177277763111059) rectangle (2.1526595744681156,2.299672591498936);
+              \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-1.9183806146572397:2.1526595744681156] plot(\x,{2*(\x)^(2)-4*(\x)+1});
+              \begin{scriptsize}
+              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$$};
+              \end{scriptsize}
+              \end{axis}
+        \end{tikzpicture}
+    }
+    \subfloat[Bild 3]{
+
+          \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+          \begin{axis}[
+          x=1cm,y=1cm,
+          axis lines=middle,
+          ymajorgrids=true,
+          xmajorgrids=true,
+          xmin=-2.3019060283688253,
+          xmax=2.9719414893617393,
+          ymin=-1.8310602690212177,
+          ymax=2.4489042699859294,
+          xtick={-2,-1,...,2},
+          ytick={-1,0,...,2},]
+          \clip(-2.301906028368825,-1.831060269021217) rectangle (2.9719414893617384,2.4489042699859294);
+          \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:2.9719414893617384] plot(\x,{1/4*(\x)^(4)-2/3*(\x)^(3)-1/2*(\x)^(2)+(\x)});
+          \begin{scriptsize}
+          \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
+          \end{scriptsize}
+          \end{axis}
+          \end{tikzpicture}
+
+
+    }      %<------------
+    \subfloat[Bild 4]{
+
+        \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \begin{axis}[
+        x=1cm,y=1cm,
+        axis lines=middle,
+        ymajorgrids=true,
+        xmajorgrids=true,
+        xmin=-2.3019060283688253,
+        xmax=2.9719414893617393,
+        ymin=-1.8310602690212177,
+        ymax=2.4489042699859294,
+        xtick={-2,-1,...,2},
+        ytick={-1,0,...,2},]
+        \clip(-2.6600620567376185,-2.13549289313469) rectangle (2.488430851063855,2.144471645872449);
+        \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=-2.6600620567376185:2.488430851063855] plot(\x,{0-(\x)^(3)-2*(\x)^(2)+(\x)+1});
+        \begin{scriptsize}
+        \draw[color=ccqqqq] (-2.4003989361702396,2.0594095891348596) node {$$};
+        \end{scriptsize}
+        \end{axis}
+        \end{tikzpicture}
+
+
+    }
+
+
+\end{figure}
+
+\newpage
+
+
+
+\vspace{0,5cm} {TEIL B} -  Hilfsmittel sind zugelassen - Bearbeitungszeit 90 Minuten
+
+\vspace{0,5cm} Analysis
+
+
+
+\vspace{0,5cm} Geometrie
+
+\Aufgabe{1:}
+Die folgende Abbildung zeigt modellhaft eine Tribüne, die auf einer horizontalen Fläche steht. TUTAJ
+Dabei beschreibt das Rechteck ABCD mit
+  $A (36|0|0)$, $ B (36|48|0)$, $C (0|48|12)$ und $ D (0|0|12) $
+die Nutzfläche der Tribüne. Das Rechteck ABPO stellt die Grundfläche der Tribüne dar, das
+Rechteck FGHK beschreibt die Dachfläche der Tribüne. Die Eckpunkte der Dachfläche liegen
+senkrecht über den entsprechenden Eckpunkten der Grundfläche.
+Die $x_1x_2 $  Ebene stellt den Erdboden dar. Die $ x_1$ – Achse zeigt nach Süden, die $x_2$ – Achse nach
+Osten. Eine Längeneinheit im Koordinatensystem entspricht 1m in der Realität, d.h. die Tribüne ist
+48m breit. Die Materialstärke ist bei den Rechnungen zu vernachlässigen.
+\begin{enumerate}[label={\alph*)}]
+\item  Bestimmen Sie eine Gleichung der Ebene N, in der das Rechteck ABCD liegt, in
+Normalenform. (zur Kontrolle:$ x_1 + 3x_3 = 36 $)
+\item Berechnen Sie die Größe des Neigungswinkels der Nutzfläche gegen die Horizontale.
+\item Die Dachfläche liegt im Modell in der Ebene $E: x_1 - 6x_3 + 96 = 0.$
+Ermitteln Sie die Koordinaten des Punktes G, der im Modell einen Dachflächeneckpunkt
+darstellt und senkrecht über dem Punkt B liegt. (zur Kontrolle: G (36|48|22))
+\item Zur Installation von Lautsprechern soll eine Metallstange so an der Tribüne befestigt
+werden, dass sie an dem Punkt beginnt, der im Modell durch den Punkt G beschrieben wird
+und an der Nutzflächenkante endet, die im Modell durch die Strecke [BC] dargestellt wird.
+Aus Kostengründen soll die Stange so kurz wie möglich sein. Untersuchen Sie, ob eine 20m
+lange Stange ausreicht.
+\item An der Dachflächenkante Richtung Spielstätte, im Modell dargestellt durch die Strecke
+[FG], soll eine Regenrinne abgehängt werden. Ein Befestigungspunkt R liegt 2 cm
+unterhalb von G. Die Lage des zweiten Befestigungspunktes wird unterhalb von F so
+gewählt, dass die Regenrinne auf einer horizontalen Länge von 2 m um 2 mm abfällt. Das
+Wasser soll dabei Richtung Westen abfließen. Geben Sie eine Gleichung der Geraden h an,
+die den Verlauf der Regenrinne zwischen den Befestigungspunkten im Modell beschreibt.
+\end{enumerate}
+
+
+\begin{flushright}12BE \end{flushright}
+\begin{flushright}bitte wenden \end{flushright}
+
+
+\Aufgabe{2:}
+Skizzieren Sie der Graphen der Funktion  $f: x \rightarrow (x-1)^2-4$ und berechnen Sie den Inhalt der Fläche, die der Graph dieser Funktion im Intervall $[-4;4]$ mit der x-Achse einschließt.
+
+\vspace{1cm}
+
+\begin{tikzpicture}
+\draw [very thin, black, step=0.5cm] (0,0) grid +(15,18);
+\end{tikzpicture}
+
+\begin{flushright}7BE \end{flushright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
