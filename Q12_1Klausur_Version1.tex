@@ -185,24 +185,43 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
     \subfloat[Bild 2]{
 
           \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-          \begin{axis}[
+         %   \begin{axis}[samples=500,domain=-6*pi:6*pi,restrict y to domain =-20:100]
+
+         %\begin{axis}[
+         %%samples=500,domain=-5:5,restrict y to domain =-5:5,
+         %x=1cm,y=1cm,
+         %axis lines=middle,
+         %ymajorgrids=true,
+         %xmajorgrids=true,
+         %    xmin=-5.3019060283688253,
+         %    xmax=3.9719414893617393,
+         %    ymin=-5.8310602690212177,
+         %    ymax=2.4489042699859294,
+         %    xtick={-5,-4,...,2,3},
+         %    ytick={-5,-4,...,2,3},]
+         %   \addplot[line width=1pt,color=ccqqqq ]plot(\x,{e^(\x)-e^(\x)* (\x)^2  )});
+         %   \end{axis}
+
+         \begin{axis}[
+           samples=500,domain=-6:5,restrict y to domain =-6:5,
           x=1cm,y=1cm,
           axis lines=middle,
           ymajorgrids=true,
           xmajorgrids=true,
-              xmin=-3.3019060283688253,
-              xmax=5.9719414893617393,
-              ymin=-2.8310602690212177,
-              ymax=5.4489042699859294,
-              xtick={-3,-2,...,4,5},
-              ytick={-2,-1,...,4,5},]
-              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
-          \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:4.9719414893617384] plot(\x,{e^(\x)- (\x)^2 )});
+          xmin=-5.3019060283688253,
+          xmax=3.9719414893617393,
+          ymin=-5.8310602690212177,
+          ymax=2.4489042699859294,
+          xtick={-5,-4,...,2,3},
+          ytick={-5,-4,...,2,3},]
+          %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
+          %\draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:4.9719414893617384] plot(\x,{e^(\x)-e^(\x)* (\x)^2  )});
+            \addplot[line width=1pt,color=ccqqqq ]plot(\x,{e^(\x)-e^(\x)* (\x)^2  )});
           \begin{scriptsize}
           \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
           \end{scriptsize}
           \end{axis}
-          \end{tikzpicture}
+         \end{tikzpicture}
 
 
     }      %<------------
