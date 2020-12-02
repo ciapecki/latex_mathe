@@ -126,14 +126,14 @@ Gegeben sind die Punkte $A (0|0|0)$ und $ C (5|3|4)$ sowie die Gerade
 $(\lambda \in \mathbb{R})$
 
 \begin{enumerate}[label={\alph*)}]
-\item Zeigen Sie, dass $ g$  eine Mittelsenkrechte von A und C ist.
+\item Zeigen Sie, dass $ g$  eine Mittelsenkrechte von $A$ und $C$ ist.
 \item  Die Punkte A und C bilden zusammen mit zwei auf g liegenden Punkten das Quadrat
  $ABCD$. Bestimmen Sie die Koordinaten von B und D.
 \end{enumerate}
-\begin{flushright}7BE \end{flushright}
+\begin{flushright}7 BE \end{flushright}
 
 
-\vspace {0,2cm}
+\vspace {0,5cm}
 ANALYSIS
 
 \Aufgabe{2:} 
@@ -146,40 +146,42 @@ Berechnen Sie die unbestimmten Integrale:
   %  \vspace{2,5cm}
   %\vspace{1cm}
 \end{enumerate}
-\begin{flushright}7BE \end{flushright}
+\begin{flushright}4 BE \end{flushright}
 \Aufgabe{3:}
-Welche Werte kann $ b \in R$ annehmen, damit folgende Gleichung stimmt? Begründen Sie kurz geometrisch!
+Welche Werte kann $ b \in R$ annehmen, damit folgende Gleichung stimmt? Begründen Sie kurz geometrisch und erklären Sie ausführlich!
 
- $ \int_ {-3}^{b} x^5 dx $
-\begin{flushright}7BE \end{flushright}
+ $ \int_ {-3}^{b} x^5 dx =0$
+\begin{flushright}4 BE \end{flushright}
 \begin{flushright}Bitte wenden \end{flushright}
 
 \Aufgabe{4:}
 
-Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der Graph der Ableitungsfunktion  $f'(x)$ und der Graph der Stammfunktion  $F(x)$ von f(x). Begründen Sie unter Verwendung der Fachbegriffen. Geben Sie zwei Argumente, warum Sie den übrigen  Graphen nicht genommen haben.
+Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der Graph der Ableitungsfunktion  $f'(x)$ und der Graph der Stammfunktion  $F(x)$ von f(x)ist. Begründen Sie gründlich unter Verwendung der Fachbegriffen. Ein Graph bleibt übrig.
 
 \begin{figure}[H]
   \centering
 
     \subfloat[Bild 1]{
       \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-              \begin{axis}[
-              x=1cm,y=1cm,
-              axis lines=middle,
-              ymajorgrids=true,
-              xmajorgrids=true,
-              xmin=-3.3019060283688253,
-              xmax=5.9719414893617393,
-              ymin=-2.8310602690212177,
-              ymax=5.4489042699859294,
-              xtick={-3,-2,...,4,5},
-              ytick={-2,-1,...,4,5},]
-              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
-              \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-1.9183806146572397:2.1526595744681156] plot(\x,{2*(\x)^(3)+0.5*(\x)^2});
-              \begin{scriptsize}
-              \draw[color=ccqqqq] (-0.69915780141845,-1.5848279995176686) node {$$};
-              \end{scriptsize}
-              \end{axis}
+               \begin{axis}[
+           samples=500,domain=-6:5,restrict y to domain =-6:5,
+          x=1cm,y=1cm,
+          axis lines=middle,
+          ymajorgrids=true,
+          xmajorgrids=true,
+          xmin=-5.3019060283688253,
+          xmax=3.9719414893617393,
+          ymin=-5.8310602690212177,
+          ymax=2.4489042699859294,
+          xtick={-5,-4,...,2,3},
+          ytick={-5,-4,...,2,3},]
+          %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
+          %\draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:4.9719414893617384] plot(\x,{e^(\x)-e^(\x)* (\x)^2  )});
+            \addplot[line width=1pt,color=ccqqqq ]plot(\x,{e^(\x)-e^(\x)* (\x)^2 -2*e^(\x)* (\x))});
+          \begin{scriptsize}
+          \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
+          \end{scriptsize}
+          \end{axis}
         \end{tikzpicture}
     }
     \subfloat[Bild 2]{
@@ -256,18 +258,20 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
 
           \begin{tikzpicture}[scale=0.9, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
           \begin{axis}[
+           samples=500,domain=-6:5,restrict y to domain =-6:5,
           x=1cm,y=1cm,
           axis lines=middle,
           ymajorgrids=true,
           xmajorgrids=true,
-              xmin=-3.3019060283688253,
-              xmax=5.9719414893617393,
-              ymin=-2.8310602690212177,
-              ymax=5.4489042699859294,
-              xtick={-3,-2,...,4,5},
-              ytick={-2,-1,...,4,5},]
-              %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
-          \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:2.9719414893617384] plot(\x,{-2*(\x)^(3)+1/2*(\x)^(2)});
+          xmin=-5.3019060283688253,
+          xmax=3.9719414893617393,
+          ymin=-5.8310602690212177,
+          ymax=2.4489042699859294,
+          xtick={-5,-4,...,2,3},
+          ytick={-5,-4,...,2,3},]
+          %\clip(-3.9183806146572397,-3.177277763111059) rectangle (3.1526595744681156,5.299672591498936);
+          %\draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-2.301906028368825:4.9719414893617384] plot(\x,{e^(\x)-e^(\x)* (\x)^2  )});
+            \addplot[line width=1pt,color=ccqqqq ]plot(\x,{e^(\x)-(e^(\x)* ((\x)^2 -2*(\x)+2)))});
           \begin{scriptsize}
           \draw[color=ccqqqq] (-1.5676861702127871,2.3638422132483394) node {$$};
           \end{scriptsize}
@@ -278,18 +282,19 @@ Finden Sie heraus, welcher der vier Graphen der Graph der Funktion $f(x)$, der G
     }      %<------------
 \end{figure}
 
-%\begin{flushright}7BE \end{flushright}
+\begin{flushright}6 BE \end{flushright}
+\newpage
 
 
 
 \vspace{0,5cm} {TEIL B} -  Hilfsmittel sind zugelassen - Bearbeitungszeit 90 Minuten
 
-\vspace {0,2cm}
+\vspace {0,5cm}
 ANALYSIS
 
-\Aufgabe {1:} 
+\Aufgabe {5:} 
 Der Rand eines Segels (siehe Abbildung) wird näherungsweise von jeweils einem Teil des Graphen $G_f$ der Funktion $f: f(x)=x+6-\frac{32}{x^2}$;
-$ \mathbb{D}_f= \mathbb{R}\  {0}$, der x-Achse und der Geraden g mit der Gleichung: $g(x)=x+4$ gebildet.
+$ \mathbb{D}_f= \mathbb{R}\setminus \{0\}$, der x-Achse und der Geraden g mit der Gleichung: $g(x)=x+4$ gebildet.
 
 \begin{figure}[h!]
   \begin{center}
@@ -301,20 +306,20 @@ $ \mathbb{D}_f= \mathbb{R}\  {0}$, der x-Achse und der Geraden g mit der Gleichu
 
 \begin{enumerate}[label={\alph*)}]
 \item Berechnen Sie den Flächeninhalt des Segels (1LE=1m).
-\item Um maximal die Windstärke zu nutzen, soll der Spitze des Segels im Hochpunkt der Funktion f liegen. Beurteilen Sie und begründen rechnerisch, ob das Boot hier diese Bedingung erfüllt. 
+\item Um maximal die Windstärke zu nutzen, soll der Spitze des Segels im Hochpunkt der Funktion f liegen. Beurteilen Sie und begründen rechnerisch, ob der Segel hier diese Bedingung erfüllt. 
 \end{enumerate}  
-\begin{flushright}7BE \end{flushright}
+\begin{flushright}7 BE \end{flushright}
 \begin{flushright}Bitte wenden \end{flushright}
 \newpage
+\addtolength{\voffset}{-2cm}
 
-\vspace {0,2cm}
-Geometrie 
-\Aufgabe{2:} 
+GEOMETRIE
+\Aufgabe{6:} 
 Die folgende Abbildung zeigt modellhaft eine Tribüne, die auf einer horizontalen Fläche steht.
 
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.7\linewidth]{tribüne.jpg}
+    \includegraphics[width=0.5\linewidth]{tribüne.jpg}
     %\caption{A boat.}
     %\label{fig:boat1}
   \end{center}
@@ -334,7 +339,7 @@ Normalenform. (zur Kontrolle:$ x_1 + 3x_3 = 36 $)
 \item Berechnen Sie die Größe des Neigungswinkels der Nutzfläche gegen die Horizontale.
 \item Die Dachfläche liegt im Modell in der Ebene $E: x_1 - 6x_3 + 96 = 0.$
 Ermitteln Sie die Koordinaten des Punktes G, der im Modell einen Dachflächeneckpunkt
-darstellt und senkrecht über dem Punkt B liegt. (zur Kontrolle: G (36|48|22))
+darstellt und senkrecht über dem Punkt B liegt. (zur Kontrolle: $G (36|48|22)$)
 \item Zur Installation von Lautsprechern soll eine Metallstange so an der Tribüne befestigt
 werden, dass sie an dem Punkt beginnt, der im Modell durch den Punkt G beschrieben wird
 und an der Nutzflächenkante endet, die im Modell durch die Strecke [BC] dargestellt wird.
@@ -347,9 +352,13 @@ gewählt, dass die Regenrinne auf einer horizontalen Länge von 2 m um 2 mm abf�
 Wasser soll dabei Richtung Westen abfließen. Geben Sie eine Gleichung der Geraden h an,
 die den Verlauf der Regenrinne zwischen den Befestigungspunkten im Modell beschreibt.
 \end{enumerate}
+\vspace{-0,7cm}
 
+\begin{flushright}18 BE \end{flushright}
+%\enlargethispage{2\baselineskip}
 
-\begin{flushright}12BE \end{flushright}
+%\addtolength{\voffset}{-2cm}
+
 
 
 
