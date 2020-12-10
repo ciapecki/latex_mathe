@@ -1,0 +1,138 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Schriftliche Ausfrage aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q11/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{} \\  \datum{}}
+\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+\vspace{1cm}
+Taschenrechner ist nicht erlaubt!
+
+\Aufgabe{1:}
+    Berechnen Sie die Ableitung der Funktion $f(x)$  und fassen Sie soweit wie möglich zusammen:
+%$f: f(x)=-x^2+2x+1,5;$ $D= \mathbb{R}$
+\begin{enumerate}[label={\alph*)}]
+\item $f(x)=3x^5 + cos(x)$
+\item $f(x)=\frac{sin(x)}{2 cos(x)}$
+\item $f(x)=sin(x)cos(x) + \frac{1}{x^2}$
+\end{enumerate}
+
+\begin{flushright}6 BE \end{flushright}
+\vspace{1cm}
+
+\Aufgabe{2:}
+     Bestimmen Sie die Tangenten- und Normalengleichung der Funktion\\ $f: f(x)=1+2cos(x)$ im Punkt $P(\frac{\pi}{3}|?)$
+%$f: f(x)=-x^2+2x+1,5;$ $D= \mathbb{R}$
+
+\begin{flushright}7 BE \end{flushright}
+
+\Aufgabe{3:}
+    Geben Sie jeweils die Gleichung der Umkehrfunktion an:
+
+%$f: f(x)=-x^2+2x+1,5;$ $D= \mathbb{R}$
+\begin{enumerate}[label={\alph*)}]
+\item $y=3x +7$
+\item $y=\frac{3}{x^2}$ für $x>0$
+\item $y=100 \cdot 2^x$
+\end{enumerate}
+
+\begin{flushright} 5  BE \end{flushright}
+\vspace{1cm}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
