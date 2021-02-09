@@ -1,0 +1,255 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+%\usepackage{tikz}
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q12/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+%\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+%\thispagestyle{fancy}
+%\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+%}
+%\rhead{\sf \Semester{} \\  \datum{}}
+%\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+\vspace{2cm}
+
+%\begin{tikzpicture}[scale=0.5]
+%    % Draw a line at 30 degrees and of length 3
+%    %\draw (0,0) -- (0:2.5cm);
+%  \draw[black] (0,0) -- (0,6) -- (5,9) -- (10,6);
+%  \draw[black] (5,9) -- (12,11) -- (14,10);
+%  \draw[black] (0,0) -- (10,0) -- (10,6);
+%  \draw[black,thin,dashed]  (0,8) -- (4,3);
+%  \draw[black,thin,dashed]  (2,3) -- (2,5);
+%  \draw[red,dashed] (0,0) -- (3,1.5) -- (8,1.5);
+%  \draw[red] (4,0) -- (5,0.5) -- (6.5,0.5) -- (8,1.5);
+%\end{tikzpicture}
+
+
+{\LARGE Zusammenfassung der wesentlichen Ableitungsregeln}
+\\
+
+Die vorkommenden Parameter $c$ und $k$ stehen für reelle Zahlen.\\
+$g$ und $h$ sind differenzierbare Funktionen, deren Ableitungen $g'$ und $h'$ bekannt sind.\\
+
+
+\bgroup
+\def\arraystretch{1.5}%  1 is the default, change whatever you need
+\begin{tabular}{p{5cm}|p{5cm}|p{5cm}}
+  {\bf Funktion} & {\bf Ableitung} & {\bf Bemerkung,Regel}\\
+  $f(x)$ & $f'(x)$ & \\
+  \hline
+  $x$ & $1$ & \\
+  $x^2$ & $2x$ & \\
+  $x^3$ & $3x^2$ & \\
+  $x^n$ & $n\cdot x^{n-1}$ & $n \in R$ \\
+  $\frac{1}{x}$ & $-\frac{1}{x^2}$ & \\
+  $\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$ & \\
+  $sin{x}$ & $cos{x}$ & \\
+  $cos{x}$ & $-sin{x}$ & \\
+  $e^x$ & $e^x$ & $e$ ist die Eulersche Zahl \\
+  $a^x$ & $ln{a}\cdot a^x$ & \\
+  $ln{x}$ & $\frac{1}{x}$ & \\
+  \hline
+  $c$ & $0$ & Konstantenregel \\
+  $g(x)+h(x)$ & $g'(x)+h'(x)$ & Summenregel \\
+  $k \cdot g(x)$ & $k \cdot g'(x)$ & Faktorregel \\
+  $g(x)\cdot h(x)$ & $g(x) \cdot h'(x) + g'(x)\cdot h(x)$ & Produktregel \\
+  $(g(x))^n$ & $n \cdot (g(x))^{n-1} \cdot g'(x)$ & Quotientenregel \\
+  $h(g(x))$ & $h'(g(x)) \cdot g'(x)$ & Kettenregel \\
+\end{tabular}
+\egroup
+
+\newpage
+
+\Aufgabe{1:}
+Leite ab:
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $f(x)=x^3-3x^2$
+  \item $f(x)=(3x^3)-2^2$
+  \item $f(x)=x-\frac{1}{x}$
+  \item $f(x)=\frac{1}{2x^2}-\frac{1}{3x^3}$
+  \item $f(x)=x^2-a$
+  \item $f(x)=x^3-a^3$
+  \item $f(x)=(ax)^3-a^3x$
+  \item $A(r)=\pi r^2$
+  \item $f(x)=2x+1$
+  \item $f(x)=(3x+2)^2$
+  \item $f(x)=(4x+3)^3$
+  \item $f(x)=\frac{1}{(5x+4)^4}$
+  \item $f(x)=\sqrt{x}$
+  \item $f(x)=\sqrt{2x-1}$
+  \item $f(x)=\sqrt{9-x^2}$
+  \item $f(x)=\frac{1}{\sqrt{a^2-x^2}}$
+  \item $f(x)=sin{x}$
+  \item $f(x)=2 cos{3x}$
+  \item $f(x)=sin{(\frac{\pi}{2}-x)}$
+  \item $f(x)=x sin{x}$
+  \item $f(x)=x^2 cos{\sqrt{x}}$
+  \item $f(x)=(sin{x})^2$
+  \item $f(x)=x\sqrt{x}$
+  \item $f(x)=x\sqrt{4-x^2}$
+\end{enumerate}
+
+\vspace{1cm}
+
+\Aufgabe{2:}
+Leite ab:
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $f(x)=\frac{x^3}{x^2-1}$
+  \item $f(x)=\frac{x^4+x^2+1}{x^2+1}$
+  \item $f(x)=\frac{ax^2-1}{x^2-a}$
+  \item $f(x)=\frac{x}{x+a}-\frac{x}{x-a}$
+  \item $f(x)=e^x$
+  \item $f(x)=2xe^{3x}$
+  \item $f(x)=e^{-\frac{1}{2}x^2}$
+  \item $f(x)=(1-e^{\sqrt{x}})^2$
+  \item $f(x)=ln{x}$
+  \item $f(x)=ln(-x)$
+  \item $f(x)=ln{\frac{x}{2}}$
+  \item $f(x)=ln{\frac{1}{x}}$
+  \item $f(x)=x ln{x}$
+  \item $f(x)=\frac{ln{x}}{x}$
+  \item $f(x)=ln(x^2+1)$
+  \item $f(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}$
+  \item $f(x)=ln(e^x+e^{-x})$
+  \item $f(t)=e^{-kt}sin{\omega t}$
+  \item $f(x)=\sqrt{ln{x}}-ln{\sqrt{x}}$
+\end{enumerate}
+
+\newpage
+\Aufgabe{3:}
+Leite ab:
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $f(x)=e^{4x}$
+  \item $f(x)=e^{4x+1}$
+  \item $f(x)=e^{4x-5}$
+  \item $f(x)=cos(x-1)$
+  \item $f(x)=cos(2x-3)$
+  \item $f(x)=cos(2x+4)$
+\end{enumerate}
+
+\enlargethispage{2\baselineskip}
+\vspace{1cm}
+\Aufgabe{4:}
+Leite ab:
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $f(x)=-3x^3-3(x+3)$
+  \item $f(x)=5(x+3x^3-2x^4)$
+  \item $g(x)=-\frac{1}{5}(5x^4-2x^5)$
+  \item $h(x)=\frac{2x^3-3x^2+2}{3}$
+  \item $u(x)=\frac{\sqrt{8}x^2+3\sqrt{6}x^3-\sqrt{2}x}{\sqrt{2}}$
+  \item $v(x)=\frac{1}{2}\sqrt{2}(\sqrt{8}x-\sqrt{2})$
+  \item $w(x)=x(2x^3-3x+4)$
+  \item $f(x)=(x-1)^2$
+  \item $g(x)=(2x^2+3)(2x^2-3)$
+  \item $g(x)=3(x^2-2)(x+1)$
+  \item $f(t)=(2t^2+4)^2$
+  \item $f(t)=2(t^2+2)^2$
+\end{enumerate}
+
+\enlargethispage{2\baselineskip}
+
+\Aufgabe{5:}
+Leite ab:
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $f(x)=\frac{x^2}{x^2+1}$
+  \item $f(x)=\frac{x+2}{3x-4}$
+  \item $f(x)=\frac{x^2}{2x-1}$
+  \item $f(x)=\frac{x}{x^2-1}$
+  \item $f(x)=\frac{1}{x^2-1}$
+  \item $f(x)=\frac{x^3-1}{x+1}$
+  \item $f(x)=\frac{x^3+1}{x+1}$
+  \item $f(x)=\frac{x^3}{x^2+1}$
+  \item $f(x)=1-\frac{1}{x^2+1}$
+  \item $f(x)=\frac{x^2-2x+1}{x^2-1}$
+  \item $f(x)=(1+\frac{1}{x})^2$
+  \item $f(x)=\frac{x^4+x^2+1}{x^2+1}$
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
