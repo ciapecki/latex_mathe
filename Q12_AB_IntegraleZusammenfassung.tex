@@ -133,10 +133,10 @@ flexiblecolumns=true,
   \begin{minipage}{\textwidth}
   {\large Faktorregel:}\\
     Einen konstanten Faktor darf man vor das Integral ziehen.\\
-      \[ \int k\cdot f(x)\ dx = k\cdot \int f(x)\ dx \]
+      \[ \int k\cdot f(x)\,dx = k\cdot \int f(x)\,dx \]
   {\large Summenregel:}\\
     Eine Summe darf man gliederweise integrieren.
-    \[ \int (f(x) + g(x))\ dx = \int f(x)\ dx + \int g(x)\ dx \]
+    \[ \int (f(x) + g(x))\,dx = \int f(x)\ dx + \int g(x)\,dx \]
   \end{minipage}
 }
 
@@ -145,10 +145,17 @@ flexiblecolumns=true,
 \fbox{%
   \begin{minipage}{\textwidth}
     Es sei $F$ eine Stammfunktion von $f$ und $a\neq0$. Dann gilt:
-      \[ \int f(ax+b)\ dx = \frac{1}{a}F(ax+b)+c \]
+      \[ \int f(ax+b)\,dx = \frac{1}{a}F(ax+b)+c \]
   \end{minipage}
 }
 
+\vspace{1cm}
+\fbox{%
+  \begin{minipage}{\textwidth}
+    \[ \int \frac{f'(x)}{f(x)}\,dx = \ln{|f(x)|}+c \quad \quad \quad
+       \int f'(x)\cdot e^{f(x)}\,dx = e^{f(x)}+c \]
+  \end{minipage}
+}
 
 
 \newpage
@@ -178,7 +185,7 @@ Bestimme zu $f$ eine Stammfunktion $F$, d.h. eine Funktion, deren Ableitung $f(x
   \item $f(x)=\cos(\frac{\pi}{2}-x)$
 \end{enumerate}
 
-
+\vspace{1cm}
 \Aufgabe{2: Anwendungen der Grundintegrale}
 Berechne das bestimmte Integral. Deute das Ergebnis am Graphen von $f$.
 \begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
@@ -205,6 +212,7 @@ Berechne das bestimmte Integral. Deute das Ergebnis am Graphen von $f$.
 \end{enumerate}
 
 
+\vspace{1cm}
 \Aufgabe{3: Integration linear transformierter Grundfunktionen}
 Bestimme:
 \begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
@@ -233,6 +241,7 @@ Bestimme:
 
 
 
+\vspace{1cm}
 \Aufgabe{4: Logarithmische Integration}
 Bestimme:
 \begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
