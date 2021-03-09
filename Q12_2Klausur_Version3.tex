@@ -209,7 +209,7 @@ Ergänzen Sie den zu $x_i=2$ gehörenden Wahrscheinlichkeitswert im Histogramm u
 
 
 
-\newpage
+%\newpage
 \enlargethispage{2cm}
 {TEIL B} - mit Hilfsmittel
 
@@ -224,15 +224,17 @@ Die Funktion $F:x\rightarrow (-5x-50)\cdot e^{-0.1x+2}$ ist eine Stammfunktion d
 
     \subfloat[]{
 
-\begin{tikzpicture}[>=latex, x=1cm, y=1cm, line cap=round, line join=round,>=triangle 45]
+%\begin{tikzpicture}[>=latex, x=1cm, y=1cm, line cap=round, line join=round,>=triangle 45]
+\begin{tikzpicture}[>=latex, x=2cm, y=2cm, line cap=round, line join=round, scale=1.5]
 \begin{axis}[
-  unit vector ratio=1 2,
+  unit vector ratio=1 1,
   axis x line=center,
   axis y line=center,
-  axis line style = thick,
   %extra x tick style={tick style={very thick}}
-  xtick={-10,0,...,50,60},
-  ytick={-10,-5,...,5,10},
+  xtick={-4,-2,...,4,6},
+  ytick={-4,-2,...,10,12},
+  ticklabel style = {font=\scriptsize},
+  %,yshift=0.5ex},
   ticklabel style={fill=white},
   %extra x ticks={0},
   %xticklabel style={anchor=south west},
@@ -243,24 +245,26 @@ Die Funktion $F:x\rightarrow (-5x-50)\cdot e^{-0.1x+2}$ ist eine Stammfunktion d
   %y=1cm,    %größe der kästchen in y-richtung
   xlabel={$x$},
   ylabel={$y$},
-  grid=both,
+  %grid=both,
   grid=major, grid style={dashed,gray!30},
   grid=minor, grid style={dashed,gray!30},
   ymajorgrids=true,
   xmajorgrids=true,
-  xlabel style={below right},
-  ylabel style={above left},
-  xmin=-15.5,
-  xmax=65.5,
-  ymin=-10.5,
-  ymax=14]
+  xlabel style={above left},
+  ylabel style={below right},
+  axis line style = thick,
+  xmin=-4.5,
+  xmax=8,
+  ymin=-4.5,
+  ymax=13]
 %\coordinate (O) at (0,0)
 %\addplot [mark=none,domain=-15:15] {};
 % \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-15:65] plot(\x,{0.5*\x *e^(-0.1*\x+2)});
-%        \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-15:65] plot(\x,{50 *\x+2});
-    \draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-21.518627341217258:25.46534828151831] plot(\x,{5*((\x)^(2)/3-(\x)^(3)/20)});
+  %      \draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-15:65] plot(\x,{50 *\x+2});
+%    \draw[line width=2pt,color=qqwuqq,smooth,samples=100,domain=-21.518627341217258:25.46534828151831] plot(\x,{5*((\x)^(2)/3-(\x)^(3)/20)});
   %\addplot[line width=1pt,color=ccqqqq, domain=-15:65]plot(\x,{0.5*\x*e^(-0.1*\x+2)});
-%\draw (26.07701146189816,9.323776772024983) node[anchor=north west] {$G_f$};
+  \addplot[line width=1pt,color=ccqqqq,smooth,samples=100, domain=-5:10]plot(\x,{5*((\x)^(2)/3-(\x)^(3)/20)});
+  \draw[color=ccqqqq] (6.07701146189816,9.323776772024983) node[anchor=north west] {$G_f$};
 
 \end{axis}
 \end{tikzpicture}
