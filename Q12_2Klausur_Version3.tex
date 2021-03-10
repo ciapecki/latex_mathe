@@ -150,13 +150,13 @@ Dem untenstehenden Histogramm kann man die Wahrscheinlichkeitswerte $P(X = x_i)$
 \begin{figure}[h!]
   \centering
 \begin{tikzpicture}[>=latex, line cap=round, line join=round,>=triangle 45, scale=1.8]
+
 \begin{axis}[
   %unit vector ratio=1 10,
   axis x line=center,
   axis y line=center,
   axis line style = thick,
   xtick align=inside,
-  %extra x tick style={tick style={very thick}}
   xtick={-4,-2,0,2,4},
   ytick={0,0.1,0.2,0.3,0.4},
   xtick style=thick,
@@ -164,26 +164,23 @@ Dem untenstehenden Histogramm kann man die Wahrscheinlichkeitswerte $P(X = x_i)$
   xticklabels={,,},
   extra x ticks={-2,0,2,4},
   bar width=1cm,
-  %xticklabel style={anchor=south west},
-  %minor x tick num=1,
   minor y tick num=9,
-  %minor tick num = 1,
   x=1cm,    %größe der kästchen in x-richtung
-  y=10cm,    %größe der kästchen in y-richtung
+  y=15cm,    %größe der kästchen in y-richtung
   xlabel={$x$},
   ylabel={$P(X=x)$},
   ymajorgrids=true,
+  yminorgrids=true,
+  minor grid style={gray!25},
+  major grid style={black!50},
   xlabel style={below right},
   ylabel style={below right},
-  %majorgrids=true,
-  %yminorgrids=true,  
-grid=minor, grid style={dashed,gray!30},
- grid=major, grid style={dashed,gray!30},
   xmin=-4,
   xmax=5,
   ymin=0,
   ymax=0.4]
-
+  
+  
 \addplot[ybar,fill=blue,fill opacity=0.2] coordinates {
         (-2,0.17)
         (0,0.33)
