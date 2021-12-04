@@ -24,6 +24,7 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{subcaption}
+\usepackage{array}
 \captionsetup{compatibility=false}
 \captionsetup[subfigure]{labelformat=empty}
 
@@ -40,6 +41,17 @@
 
 \pagenumbering{gobble}
 
+\usepackage{tabularray}
+\usepackage{multirow}
+\usepackage{booktabs,tabularx}
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +65,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength{\parindent}{0em}
-\topmargin -1.0cm
+%\topmargin -1.0cm
 \oddsidemargin 0cm
 \evensidemargin 0cm
 \setlength{\textheight}{9.2in}
@@ -92,11 +104,27 @@ flexiblecolumns=true,
 \author{\Name{}}
 
 \begin{document}
+
+\fancyhead{}
+\fancyhead[C]{\includegraphics[height=2.5cm]{lukasLogo.png}
+\vspace{2cm}
+}
+
 \thispagestyle{fancy}
 %\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
-\lhead{\sf \large \Fach{} %\small \Name{} - \Matrikelnummer{}
+
+
+\lhead{
+%\vspace{1cm}
+  \sf \LARGE \Fach{} %\small \Name{} - \Matrikelnummer{}
 }
 \rhead{\sf \Semester{}   \datum{}}
+
+\vspace*{0.2cm}
+
+\vspace{4cm}
+Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sein!
+
 %\rhead{\sf \Semester{} }
 \vspace*{0.2cm}
 %\begin{center}
@@ -108,6 +136,7 @@ flexiblecolumns=true,
 %% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{1cm}
   Name: \underline{\hspace{7cm}}
 %\draw[line width=1pt,color=ccqqqq,smooth,samples=100,domain=-6:7] plot(\x,{(1/12)*\x*\x+(1/3)*\x});
   \hfill
@@ -117,9 +146,31 @@ flexiblecolumns=true,
 
 %\vspace{1,5cm} {TEIL A} - ohne Hilfsmittel. Bearbeitungszeit 35 min.
 \vspace {2cm}
- 
 
-\Aufgabe{1: (3+3)} 
+
+\begin{center}
+  \begin{tblr}{
+      width=1\linewidth,
+      colspec = {Q[c,6em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,6em]},
+      rowspec = {Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]},
+      colsep = 0mm,
+      %row{1} = {2em,azure2,fg=white,font=\large\bfseries\sffamily},
+      row{1} = {2em,font=\large\bfseries\sffamily},
+      hlines, vlines,
+    }
+    \textbf{Aufgabe} & \textbf{1} & \textbf{2} & \textbf{3} & 
+    \textbf{4} & \textbf{5} & \textbf{6} & \textbf{Gesamt} \\
+    {Mögliche \\ Punkte} & {6} & {8} & {6} & 5 & 7 & 10 & 42 \\
+    {Erreichte \\ Punkte} &  &  &  &  &  &  &  \\
+  \end{tblr}
+\end{center}
+
+\vspace{5cm}
+\centerline{\huge\bfseries\sffamily Viel Erfolg !!!}
+
+\newpage
+
+\Aufgabe{1: (3BE+3BE)} 
 Gegeben ist der Graph der Funktion $f$. 
 \begin{enumerate}[label={\alph*)}] 
   \item Bestimmen Sie näherungsweise den Wert des Integrals ${\int_{0}^{10} f(x)\, dx}$ und ermitteln Sie die prozentuale Abweichung von dem realen Wert von 51.
@@ -130,7 +181,7 @@ Gegeben ist der Graph der Funktion $f$.
   %\label{fig:boat1}
 \end{figure}
 \newpage
-  \item Gegeben ist derselber Graph der Funktion $f$. Skizzieren Sie möglichen Verlauf der Ableitungs- und Stammfunktion von $f$.
+  \item Gegeben ist der Graph der Funktion $f$ aus Teilaufgabe a). Skizzieren Sie einen möglichen Verlauf der Ableitungs- und Stammfunktion von $f$ in das gegebene Koordinatensystem.
 \end{enumerate}
 \begin{figure}[H]
   \centering
@@ -142,18 +193,18 @@ Gegeben ist der Graph der Funktion $f$.
 
 \vspace{1cm}
 
-\Aufgabe{2: (3+5)} 
+\Aufgabe{2: (3BE+5BE)} 
 \begin{enumerate}[label={\alph*)}] 
   \item Berechnen Sie den Wert des Integrals:
     \[ \int_{3}^{5} \frac{x+1}{2(0,5x^2+x)}\,dx \]
   \item Bestimmen Sie den Inhalt der Fläche, die die Graphen der Funktionen ${f(x)= \frac{1}{4}x^2}$ und ${g(x) = x+3}$ mit der $y$-Achse im 1. Quadranten einschließen. (Skizze!)
 \end{enumerate}
 
-\Aufgabe{3: (6)} 
+\Aufgabe{3: (6BE)} 
 Bestimmen Sie die Nullstellen, Extrema, Wendepunkte und das Krümmungsverhalten des Graphen der Funktion ${f(x)=x\cdot e^{-x}}$.
 
 \newpage
-\Aufgabe{4: (4+2)} 
+\Aufgabe{4: (3BE+2BE)} 
 \begin{enumerate}[label={\alph*)}] 
   \item Bestimmen Sie eine ganzrationale Funktion höchstens vierten Grades, deren Graph bzgl. der $y$-Achse symmetrisch ist und in $P (-1|1)$ eine Wendetangente mit der Steigung 3 hat.
   \item Geben Sie einen Funktionsterm einer Funktion $f$ an, dessen Graph streng monoton steigt und rechtsgekrümmt ist.
@@ -169,7 +220,7 @@ Bestimmen Sie die Nullstellen, Extrema, Wendepunkte und das Krümmungsverhalten 
 %\end{enumerate}
 
 
-\Aufgabe{5: (7)} 
+\Aufgabe{5: (7BE)} 
 Bei einem Basketballtraining sollen die Teilnehmer Korbleger mit links üben. Sepps Trefferwahrscheinlichkeit liegt bei 0,4.
 \begin{enumerate}[label={\alph*)}] 
   \item Bestimmen Sie die Wahrscheinlichkeiten dafür, dass Sepp bei 5 Würfen\\
@@ -177,7 +228,7 @@ Bei einem Basketballtraining sollen die Teilnehmer Korbleger mit links üben. Se
   \item Wie oft muss Sepp mindestens werfen, damit er mit einer Wahrscheinlichkeit von 98\% wenigstens einmal trifft?
 \end{enumerate}
 
-\Aufgabe{6: (5+4+3)} 
+\Aufgabe{6: (4BE+3BE+3BE)} 
 Mit den beiden Glücksrädern wird Ihnen folgendes Spiel angeboten: Sie legen 5€ auf den Tisch. Dann wird eines der Glücksräder zweimal gedreht. Nach jeder Drehung geschieht Folgendes: Zeigt der Pfeil auf $\cdot$2, so wird der gerade auf dem Tisch liegende Betrag verdoppelt, zeigt der Pfeil auf $\cdot$0.5, wird er halbiert.
 
 \begin{figure}[H]
@@ -188,11 +239,10 @@ Mit den beiden Glücksrädern wird Ihnen folgendes Spiel angeboten: Sie legen 5�
 \begin{enumerate}[label={\alph*)}] 
   \item Berechnen Sie den Erwartungswert für Ihren Gewinn, wenn das Glücksrad 1 benutzt wird.
   \item Berechnen Sie den Erwartungswert für Ihren Gewinn in Abhängigkeit von der Wahrscheinlichkeit $p$, mit der der Pfeil auf dem Feld $\cdot$2 stehen bleibt, wenn das Glücksrad 2 benutzt wird.
-  \item Konstruieren Sie ein Glücksrad ähnlich wie das Glücksrad 2, sodass das Spiel als fair bezeichnet werden kann.
+  \item Konstruieren Sie ein Glücksrad ähnlich wie das Glücksrad 2, sodass das Spiel als fair bezeichnet werden kann. Wie groß wird der Mittelpunktwinkel für das Feld $\cdot$2?
 \end{enumerate}
 %\vspace{2cm}
 
-\centerline{Viel Erfolg}
 
 
 \end{document}
