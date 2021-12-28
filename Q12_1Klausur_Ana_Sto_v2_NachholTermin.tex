@@ -55,7 +55,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\Fach}{1. Klausur aus der Mathematik (A)}
+\newcommand{\Fach}{1. Klausur aus der Mathematik (Nachholtermin)}
 \newcommand{\Name}{}
 \newcommand{\datum}{}
 \newcommand{\Matrikelnummer}{}
@@ -161,7 +161,7 @@ Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sei
     }
     \textbf{Aufgabe} & \textbf{1} & \textbf{2} & \textbf{3} & 
     \textbf{4} & \textbf{5} & \textbf{6} & \textbf{Gesamt} \\
-    {Mögliche \\ Punkte} & {7} & {8} & {13} & 5 & 7 & 10 & 50 \\
+    {Mögliche \\ Punkte} & {6} & {8} & {12} & 7 & 5 & 13 & 48 \\
     {Erreichte \\ Punkte} &  &  &  &  &  &  &  \\
   \end{tblr}
 \end{center}
@@ -171,22 +171,38 @@ Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sei
 
 \newpage
 
-\Aufgabe{1: (3BE+4BE)} 
+\Aufgabe{1: (2BE+2BE+2BE)} 
 
-\noindent
-\begin{minipage}{0.6\textwidth}%\raggedleft
-  Nebenstehende Abbildung zeigt den Graphen einer Funktion $f$.
+Nebenstehende Abbildung zeigt den Graphen einer Funktion $f$.
   \begin{enumerate}[label={\alph*)}] 
     \item Begründen Sie, an welchen Stellen jede Stammfunktion von $f$ ein Minimum hat.
-    \item Erläutern Sie, an welcher Stelle des Intervalls $[0;4]$ die Integralfunktion von $f$ zur unteren Grenze 0 ein lokales Maximum hat.
     \item Skizzieren Sie den Graphen einer Stammfunktion von $f$ in die Abbildung.
+    \item Skizzieren Sie den Graphen einer Ableitungsfunktion von $f$ in die Abbildung.
   \end{enumerate}
-\end{minipage}
-\hfill%
-\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
-  \includegraphics[width=\linewidth]{Q12_1Klausur_Ana_Sto_v2_NachholTermin_01.png}
-\end{minipage}%
 
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.25]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-3.713302863837152,
+xmax=5.552502227713441,
+ymin=-3.69329981739455,
+ymax=5.169141217180235,
+xtick={-3,-2,...,4,5,6},
+ytick={-3,-2,...,5,6},]
+\clip(-4.713302863837152,-8.69329981739455) rectangle (5.552502227713441,9.069141217180235);
+  \draw[line width=2pt,color=kolorwykresu,smooth,samples=100,domain=-2.713302863837152:5.552502227713441] plot(\x,{((\x)+1)^2*e^(1-(\x))-1});
+\begin{scriptsize}
+\draw[color=kolorwykresu] (-1.922828743601838,4.201389315429992) node {$f$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\vspace{2cm}
 
 \Aufgabe{2: (3BE+5BE)} 
 \begin{enumerate}[label={\alph*)}] 
@@ -195,8 +211,13 @@ Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sei
   \item Bestimmen Sie den Inhalt der Fläche, die die Graphen der Funktionen ${f(x)=\sqrt{3x}}$ und $g(x) = 0,5x$ einschließen. (Skizze!)
 \end{enumerate}
 
-\Aufgabe{3: (2BE+2BE+4BE+2BE+3BE)} 
+\Aufgabe{3: (4BE+3BE+2BE)} 
 Ein Computervirus wird auf die Rechner dieser Welt losgelassen. Der Virus breitet sich erst aus und wird dann bekämpft. Die Funktion $v(t)=3t e^{-t}$  beschreibt modellhaft, wie viele Millionen Rechner vom Virus befallen sind. $t$ gibt die Zeit ab dem Ausbruch in Tagen an.
+
+\begin{center}
+  {\includegraphics[height=4.5cm]{Q12_1Klausur_Ana_Sto_v2_NachholTermin_02.jpeg}}
+\end{center}
+
 \begin{enumerate}[label={\alph*)}] 
   \item An welchem Tag waren die meisten Rechner betroffen und wie viele waren das?
   \item Berechnen Sie, an welchem Tag der Rückgang am stärksten war.
@@ -204,26 +225,34 @@ Ein Computervirus wird auf die Rechner dieser Welt losgelassen. Der Virus breite
 \end{enumerate}
 
 
-\Aufgabe{4: (3BE+2BE)} 
+\Aufgabe{4: (4BE+3BE)} 
 \begin{enumerate}[label={\alph*)}] 
   \item Zeigen Sie: Für $a,b > 0$ und $c \in {\mathbb{R}}$  hat der Graph von $f(x)=ax^5-bx^3+cx$ drei Wendepunkte, die auf einer Geraden liegen.
-\item Geben Sie einen Funktionsterm einer Funktion $f$ an, dessen Graph streng monoton steigt und rechtsgekrümmt ist.
+\item Geben Sie einen Funktionsterm einer Funktion $f$ an, dessen Graph eine hebbare Definitionslücke an der Stelle $x=2$ hat und eine schräge Asymptote, die parallel zu Winkelhalbierenden den I. und III. Quadranten verläuft, besitzt.
 \end{enumerate}
 
 
-\Aufgabe{5: (7BE)} 
+\Aufgabe{5: (5BE)} 
 Sie organisieren ein Spiel mit einem zweifarbigen Glücksrad. Der Einsatz soll 5€ betragen und der Gewinner bekommt 100€. Als Bank wollen Sie unauffällig von dem Spiel profitieren und pro Spiel einen durchschnittlichen Gewinn von 10 Cent erzielen.\\
 Berechnen Sie, wie groß der Gewinnsektor des Glücksrades sein muss, damit Ihre Rechnung aufgeht.
 
-\Aufgabe{6: (4BE+3BE+3BE)} 
-Bei einem Basketballtraining sollen die Teilnehmer Korbleger mit links üben. Sepps Trefferwahrscheinlichkeit liegt bei 0,4.
-\begin{enumerate}[label={\alph*)}]
-  \item Bestimmen Sie die Wahrscheinlichkeiten dafür, dass Sepp bei 5 Würfen (i) mindestens 2
-    Körbe trifft, (ii) genau beim ersten und beim letzten Wurf trifft.
-  \item Wie oft muss Sepp mindestens werfen, damit er mit einer Wahrscheinlichkeit von 98\%
-    wenigstens einmal trifft?
-\end{enumerate}
+\newpage
+\Aufgabe{6: (3BE+3BE+4BE+3BE)} 
+Zwischen den Mannschaften A und B findet ein Elfmeterschießen statt. Dabei kann vereinfachend davon ausgegangen werden, dass jeder Spieler von A mit einer Wahrscheinlichkeit von 75\% einen Elfmeter verwandelt.\\
 
+\begin{center}
+  {\includegraphics[height=4.5cm]{Q12_1Klausur_Ana_Sto_v2_NachholTermin_01.jpeg}}
+\end{center}
+
+\begin{enumerate}[label={\alph*)}] 
+  \item Wie viele Elfmeter muss Mannschaft A mindestens schießen, damit sie mit einer Wahrscheinlichkeit von mehr als 99,9\% mindestens einen verwandelt? 
+  \item Wie groß muss die Trefferquote der Spieler von Mannschaft B mindestens sein, damit die Wahrscheinlichkeit dafür, dass sie von 5 Elfmetern mindestens einen verwandeln, mindestens 92,0\% beträgt?\\
+\\
+Als Alternativen zum üblichen Ablauf eines Elfmeterschießens werden die beiden folgenden Verfahren vorgeschlagen. Dabei habe jeder Spieler von B eine Treffer quote von 70\%.
+
+\item Beide Mannschaften schießen je dreimal. Mit welcher Wahrscheinlichkeit endet dieses "Elfmeterduell" unentschieden? 
+\item Die Schützen der beiden Mannschaften treten paarweise gegeneinander an: Ein Spieler von A und einer von B schießen je einmal. Liegt danach eine Mannschaft in Führung, endet das Spiel sofort, anderenfalls wird das Verfahren mit dem nächsten Spielerpaar wiederholt. Mit welcher Wahrscheinlichkeit würde bei diesem Vorgehen nach drei angetretenen Paaren noch kein Sieger feststehen?
+\end{enumerate}
 
 
 
