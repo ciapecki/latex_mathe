@@ -33,6 +33,7 @@
 \usetikzlibrary{arrows}
 
 \definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{kolorwykresu}{rgb}{0.07,0.04,0.56}
 
 \pagenumbering{gobble}
 
@@ -115,7 +116,7 @@ flexiblecolumns=true,
 % 
 %GEOMETRIE
 
-\Aufgabe{1:}
+\Aufgabe{1: (6BE)}
 Entscheiden Sie, ob die folgenden Aussagen wahr oder falsch sind. Begründen Sie jeweils in einem Satz die falschen Aussagen. (Achtung: für fehlende oder falsche Angaben werden Punkte abgezogen!)\\
 
 Gegeben ist die Funktion 
@@ -124,68 +125,85 @@ Gegeben ist die Funktion
 \begin{enumerate}[label={\alph*)}]
   \item Die Definitionsmenge von $f$ ist $D_f = \{-3; 2\}$.
   \item Der Graph $G_f$ schneidet die $y$-Achse oberhalb des Ursprungs.
-  \item Der Graph $G_f$ hat ein Loch.
+  \item Der Graph $G_f$ hat eine hebbare Definitionslücke.
   \item Die Funktion $f$ hat einen Pol mit Vorzeichenwechsel.
   \item Der Punkt $P(-1|2,25)$ liegt auf $G_f$.
   \item Die Wertemenge ist $W_f = ]0; \infty[$.
 \end{enumerate}
 
 
-\Aufgabe{2:}
+\Aufgabe{2: (2BE + 4BE + 5BE + 3BE + 3BE)}
 Gegeben ist die Funktion $f$ mit
-\[ f(x) = \frac{x^2+1}{(x+1)^2} \]
+\[ f(x) = \frac{4x^2+1}{x} = 4x + \frac{1}{x} \]
 \begin{enumerate}[label={\alph*)}]
   \item Bestimmen Sie die Definitionsmenge und die Schnittpunkte mit den Koordinatenachsen.
   \item Ermitteln Sie das Verhalten an den Grenzen des Definitionsbereichs.\\
     Geben Sie die Gleichungen aller Asymptoten an.
   \item Bestimmen Sie Art und Lage des Extrempunkts von $G_f$.
-  \item Bestimmen Sie Krümmungsverhalten und Lage des Wendepunkts von $G_f$.
+  \item Bestimmen Sie Krümmungsverhalten und Lage des eventuellen Wendepunkts von $G_f$.
   \item Skizzieren Sie unter Verwendung aller bisherigen Ergebnisse den Graphen von $f$.
 \end{enumerate}
 
 
-\Aufgabe{3:}
+\Aufgabe{3: (3BE + 3BE)}
+
+\addtolength{\topmargin}{-6.0pt}
+\setlength{\headheight}{18.0pt}
+
 \begin{enumerate}[label={\alph*)}]
   \item Gegeben ist die Funktion $f$ mit 
     \[ f(x) = x^2+3x-1 \]\\
-    Ermitteln Sie mit Hilfe des Differentialquotienten die Ableitung der Funktion $f(x)$.
+    Ermitteln Sie mit Hilfe des Differentialquotienten die Ableitung der Funktion $f(x)$ an der Stelle $x=-2$.
     \item Skizzieren Sie zum gegebenen Graph der Funktion $h$ die zugehörige Ableitungsfunktion $h'$ (direkt im gegebenen Koordinatensystem)
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[width=0.9 \linewidth]{Q11_1KlausurJanuar2022_1.png}
-  \end{center}
-\end{figure}
-
 \end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.95]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-6.713302863837152,
+xmax=6.552502227713441,
+ymin=-8.69329981739455,
+ymax=8.669141217180235,
+xtick={-6,-5,...,4,5,6},
+ytick={-8,-7,...,8},]
+\clip(-4.713302863837152,-8.69329981739455) rectangle (4.552502227713441,9.069141217180235);
+\draw[line width=2pt,color=kolorwykresu,smooth,samples=100,domain=-2.713302863837152:4.552502227713441] plot(\x,{0.2*((\x)+2)*((\x)-1)^(3)*((\x)-3)});
+\begin{scriptsize}
+\draw[color=kolorwykresu] (-1.922828743601838,-8.201389315429992) node {$h$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+
+%\begin{figure}[h!]
+%  \begin{center}
+%    \includegraphics[width=0.9 \linewidth]{Q11_1KlausurJanuar2022_1.png}
+%  \end{center}
+%\end{figure}
+
 
 \newpage
 \enlargethispage{4cm}
-\Aufgabe{4:}
+\Aufgabe{4: (2BE + 4BE)}
 Gegeben ist die Funktion 
 \[f:x \rightarrow \frac{x^2-a}{x^2-b} \quad \text{mit $a\neq b$}\]
 
 \begin{enumerate}[label={\alph*)}]
   \item Geben Sie einen Wert für $b$ an, so dass die Funktion $f$ für alle reellen Zahlen definiert ist.
   \item Bestimmen Sie die Nullstellen von $f$ in Abhängigkeit von $a$. (Fallunterscheidung!)
-  \item Einer der drei abgebildeten Graphen gehört zum Fall $0 < a < b$.\\
-    Geben Sie an, welcher dies ist, und begründen Sie Ihre Antwort, indem Sie erläutern, warum die beiden anderen Fälle ausscheiden.
 \end{enumerate}
 
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[width=0.7 \linewidth]{Q11_1KlausurJanuar2022_2.png}
-  \end{center}
-\end{figure}
-
-
-\Aufgabe{5:}
-
+\Aufgabe{5: (4BE + 3BE)}
 \noindent
 \begin{minipage}{0.6\textwidth}%\raggedleft
 Bei einem Rennen 1999 in Silverstone versagten bei Michael Schumacher Bremsen und Lenkung vor Einfahrt in die Stowe-Kurve. Der Streckenverlauf wird durch den Graph der Funktion $f$ mit
 \[f(x)=-\frac{1}{3}x^2+3 \]
-angenähert, sein Wagen verlässt die Fahrbahn an der Stelle $x_0 = -3$.
+  angenähert, sein Wagen verlässt die Fahrbahn an der Stelle $x_0 = -3$ (Skizze!).
 \end{minipage}
 \hfill%
 \begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
@@ -206,7 +224,7 @@ angenähert, sein Wagen verlässt die Fahrbahn an der Stelle $x_0 = -3$.
   \item Bestimmen Sie die Gleichung der Funktion, die die Flugbahn des Reifens beschreibt.
 \end{enumerate}
 
-
+\vspace{3cm}
 
 \centerline{Viel Erfolg}
 %\enlargethispage{2\baselineskip}
@@ -230,7 +248,7 @@ angenähert, sein Wagen verlässt die Fahrbahn an der Stelle $x_0 = -3$.
 
 \newpage
 \Aufgabe{3: Musterlösung}
-\includegraphics[width=\linewidth]{Q11_1KlausurJanuar2022_ml3.png}
+\includegraphics[width=\linewidth]{Q11_1KlausurJanuar2022_ml3a.png}
 
 \Aufgabe{4: Musterlösung}
 \includegraphics[width=\linewidth]{Q11_1KlausurJanuar2022_ml4.png}
