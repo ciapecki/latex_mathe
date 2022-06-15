@@ -1,0 +1,19 @@
+
+% Minor adaptions from http://michaelgoerz.net/notes/printable-paper-with-latex-and-tikz.html
+\documentclass[a4paper, 10pt]{article} % for A4 size paper
+\usepackage{tikz}
+\begin{document}
+\pagestyle{empty}
+\colorlet{dlines}{green!25!black}
+\colorlet{llines}{green!25!gray}
+\tikzset{
+  %dashed lines/.style={llines, very thin, densely dashed},
+  strong lines/.style={dlines, very thin},
+}
+
+\begin{tikzpicture}[remember picture, overlay]
+  %\draw[style=dashed lines,step=10mm] (current page.south west) grid +(210mm,297mm);
+  \draw[style=strong lines,step=5mm] (0,0) grid +(100mm,50mm);
+\end{tikzpicture}
+
+\end{document}
