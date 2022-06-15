@@ -1,6 +1,10 @@
 %compile with pdflatex on papeeria
 
 \documentclass[a4paper,12pt]{article}
+
+
+\usepackage{fontawesome}
+
 \usepackage{fancyhdr}
 \usepackage{fancyheadings}
 \usepackage[ngerman,german]{babel}
@@ -41,6 +45,9 @@
 \usepackage{tabularray}
 \usepackage{multirow}
 \usepackage{booktabs,tabularx}
+
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
 \renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -151,17 +158,17 @@ Zeit: 90 Minuten
 \begin{center}
   \begin{tblr}{
       width=1\linewidth,
-      colspec = {Q[c,6em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,6em]},
-      rowspec = {Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]},
+      colspec = {Q[c,6em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,6em]},
+      rowspec = {Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]},
       colsep = 0mm,
       %row{1} = {2em,azure2,fg=white,font=\large\bfseries\sffamily},
       row{1} = {2em,font=\large\bfseries\sffamily},
       hlines, vlines,
     }
     \textbf{Aufgabe} & \textbf{1} & \textbf{2} & \textbf{3} & 
-    \textbf{4} & \textbf{5} & \textbf{Gesamt} \\
-    {Mögliche \\ Punkte} & {6} & {17} & {6} & 8 & 7 & 44 \\
-    {Erreichte \\ Punkte} &  &  &  &  &  &  \\
+    \textbf{4} & \textbf{Gesamt} \\
+    {Mögliche \\ Punkte} & {7} & {18} & {10} & 12 & 47 \\
+    {Erreichte \\ Punkte} &  &  &  &  &  \\
   \end{tblr}
 \end{center}
 
@@ -179,7 +186,7 @@ Die normale Körpertemperatur eines gesunden Menschen liegt bei 36,5°C.  Die Fu
 \end{center}
 
 \begin{enumerate}[label={\alph*)}]
-  \item Berechnen Sie die maximale Körpertemperatur Tmax sowie den Zeitpunkt xmax, zu dem diese Temperatur erreicht wird.\\
+  \item Berechnen Sie die maximale Körpertemperatur $T_{max}$ sowie den Zeitpunkt $x_{max}$, zu dem diese Temperatur erreicht wird.\\
 (Antwortsatz!)\\
 \\
     {[ Teilergebnis zur Kontrolle: $f'(x) = (1-0,1x) \cdot e^{-0,1x}$ ]}
@@ -188,7 +195,7 @@ Die normale Körpertemperatur eines gesunden Menschen liegt bei 36,5°C.  Die Fu
 
 \newpage
 
-\Aufgabe{2: (1BE + 3BE + 6BE + 4BE + 2BE)} 
+\Aufgabe{2: (1BE + 3BE + 8BE + 6BE)}
 %\textbf{Untersuchung einer Logarithmusfunktion}\\
 
 Gegeben ist die Funktion $f$ mit $f(x)=1+\frac{3}{x}+\frac{3 \ln x}{x}$.
@@ -196,10 +203,12 @@ Gegeben ist die Funktion $f$ mit $f(x)=1+\frac{3}{x}+\frac{3 \ln x}{x}$.
 \begin{enumerate}[label={\alph*)}]
   \item Bestimme die Definitionsmenge.
   \item Untersuche das Verhalten von $f$ an den Grenzen des Definitionsbereiches. Gib die Gleichungen der Asymptoten an.
-  \item Untersuche $G_f$ auf Monotonie- und Krümmungsverhalten. Gib die Extremstellen und Wendepunkte an.
+  \item Untersuche $G_f$ auf Monotonie- und Krümmungsverhalten. Gib die Extremstellen und Wendepunkte an.\\
+    {[ Teilergebnis zur Kontrolle: $f'(x) = \frac{-3 \ln x}{x^2}$ ]}
   \item Bestimme die Gleichungen der Tangenten an $G_f$ in den Punkten $P(e^{-1} | y_p)$ und $Q(e|y_Q)$. Berechne den Schnittwinkel der Tangenten. 
-  \item Zeichne unter Verwendung der bisherigen Ergebnisse den Graphen $G_f$ und trage die Tangenten durch $P$ und $Q$ ein.
 \end{enumerate}
+
+
 
 \vspace{2cm}
 
@@ -223,22 +232,38 @@ Die Ereignisse $R$: ''Ein zufällig ausgewählter Angestellter hat eine nach rec
 
 \vspace{2cm}
 
-\Aufgabe{4: (4BE + 3BE + 3BE)}
+\Aufgabe{4: (4BE + 4BE + 4BE)}
 %\textbf{Doppelpyramide (Abiturprüfung in Mecklenburg-Vorpommern)}\\
-Die Punkte $A(7|1|1)$, $B(3|5|3)$, $C(1|1|7)$, $D$, $S_1(0|-1|0)$ und $S_2$ bestimmen als Eckpunkte eine gerade Doppelpyramide mit dem Parallelogramm $ABCD$ als gemeinsamer Grundfläche (siehe Abbildung). Beide Einzelpyramiden haben Höhen gleicher Länge.
 
-\includegraphics[width=0.5\linewidth]{Q11_2Klausur_DoppelPyramideMod.png}
+%\includegraphics[width=0.5\linewidth]{Q11_2Klausur_DoppelPyramideMod.png}
+
+
+
+\begin{minipage}[t]{0.7\textwidth}
+Die Punkte $A(7|1|1)$, $B(3|5|3)$, $C(1|1|7)$, $D$, $S_1(0|\text{--}1|0)$ und $S_2$ bestimmen als Eckpunkte eine gerade Doppelpyramide mit dem Parallelogramm $ABCD$ als gemeinsamer Grundfläche (siehe Abbildung). Beide Einzelpyramiden haben Höhen gleicher Länge.
 
 \begin{enumerate}[label={\alph*)}]
   \item Zeige, dass das Parallelogramm $ABCD$ ein Quadrat ist.
   \item Bestimme die Koordinaten von $D$. Berechne die Koordinaten des Mittelpunktes $M$ des Quadrates $ABCD$. Ermittle die Koordinaten von $S_2$.
   \item Bestimme das Volumen der Doppelpyramide.
+
 \end{enumerate}
+\end{minipage}
+\hspace*{0.75cm}
+\begin{minipage}[t]{0.35\textwidth}
+  \begin{figure}[H]
+    \vspace{-1cm}
+    \centering
+    \includegraphics[width=1.2\linewidth]{Q11_2Klausur_DoppelPyramideMod.png}
+  \end{figure}
+\end{minipage}
 
-\vspace{0.5cm}
 
 
-\centerline{Viel Erfolg}
+
+
+\vspace{2.5cm}
+\centerline{Viel Erfolg \faThumbsOUp }
 %\enlargethispage{2\baselineskip}
 
 %\addtolength{\voffset}{-2cm}
@@ -254,6 +279,16 @@ Die Punkte $A(7|1|1)$, $B(3|5|3)$, $C(1|1|7)$, $D$, $S_1(0|-1|0)$ und $S_2$ best
 %\includegraphics[width=\linewidth]{Q11_1KlausurJanuar2022_ml1.png}
 
 \Aufgabe{2: Musterlösung}
+\includegraphics[width=\linewidth]{Q11_2Klausur_MusterLsg2.png}
+
+\newpage
+\Aufgabe{3: Musterlösung}
+\includegraphics[width=0.6\linewidth]{Q11_2Klausur_MusterLsg3-0.png}
+\\
+\includegraphics[width=0.6\linewidth]{Q11_2Klausur_MusterLsg3-1.png}
+
+\newpage
+\Aufgabe{4: Musterlösung}
 \includegraphics[width=\linewidth]{Q11_2Klausur_4_loesungPyramide.png}
 
 \newpage
@@ -270,22 +305,30 @@ Gegeben ist die Funktion $f\left(x\right)=\sqrt{\ln (6-x)}$
 \end{enumerate}
 
 
-\Aufgabe{3: (6BE)} \textbf{''Deep Blue''}\\
+\Aufgabe{3: (6BE)} 
+%\textbf{''Deep Blue''}\\
 
 ''Deep Blue'' ist eine Dokumentation des Lebensraums Meer und seiner Bewohner. \\
-   \\ 
+
+
+\begin{minipage}[t]{0.8\textwidth}
 \textit{''Das Tageslicht reicht nur bis zu 300 m unter der Wasseroberfläche Fische die in Zonen mit Schwachlicht leben, haben oft große Augen, um die Lichtausbeute zu optimieren (z.B. Beilfische). Allerdings leben einige Fische auch in völliger Dunkelheit, die Augen haben dann keine Funktion mehr und bildeten sich im Laufe der Evolution zurück. Viele Tiefseefische besitzen zudem Leuchtorgane: In ihnen wird durch eine chemische Reaktion Licht erzeugt (Biolumineszenz), oft mit Hilfe symbiotischer Bakterien. Leuchtorgane erfüllen bei verschiedenen Arten unterschiedliche Aufgaben, z.B. Beleuchtung der Umgebung, Partnersuche oder Anlocken von Beutetieren. Letztere Funktion ist bei den Tiefsee-Anglerfischen zur Perfektion gebracht: Diese besitzen einen Fortsatz mit einem Leuchtorgan am Ende (die ''Angel''), der direkt vor dem Kopf endet. Kleine Fische schwimmen so, vom Licht angezogen, direkt vor das Maul des Anglerfisches und werden verspeist''}\\
-\\
 Quelle: \href{https://de.wikipedia.org/wiki/Tiefseefisch}{de.wikipedia.org/wiki/Tiefseefisch}\\
-\\
-
-
+\end{minipage}
+%\hspace*{0.75cm}
+\begin{minipage}[t]{0.27\textwidth}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\columnwidth]{Q11_2Klausur_3_fisch.png}
+    \includegraphics[width=1.4\columnwidth]{Q11_2Klausur_3_fisch.png}
     %\caption{A boat.}
     %\label{fig:boat1}
   \end{figure}
+\end{minipage}
+
+
+
+
+
 
 Im Wasser nimmt die Intensität des Licht pro 1 Meter Wassertiefe um 8\% ab.
 
@@ -299,6 +342,9 @@ Im Wasser nimmt die Intensität des Licht pro 1 Meter Wassertiefe um 8\% ab.
 \end{enumerate}
 
 
+\newpage
+\Aufgabe{3: Musterlösung}
+\includegraphics[width=1\linewidth]{Q11_2Klausur_MusterLsg3n_DeepBlue.png}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
