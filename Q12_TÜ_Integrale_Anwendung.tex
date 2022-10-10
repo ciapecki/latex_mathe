@@ -1,0 +1,127 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Tägliche Übung aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q12/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+
+\newcounter{aufgabencounter}
+\newcommand{\aufgabeNr}{\stepcounter{aufgabencounter}{\theaufgabencounter}}
+
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe \aufgabeNr}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+%\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+\lhead{\sf \large \Fach{} %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{}   \datum{}}
+%\rhead{\sf \Semester{} }
+\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+
+\vspace{1cm}
+\vspace{1cm}Die Rechenwege müssen nachvollziehbar sein!
+\vspace{1cm}
+
+
+\Aufgabe
+Vorgelegt ist die Funktion $f: f(x) = \frac{8x}{x^2+4}; D_f=D_{f max};$ ihr Graph ist $G_f$.
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Geben Sie $D_{f max}$ an. Zeigen Sie, dass $G_f$ punktsymmetrisch zum Ursprung ist.
+  \item Untersuchen Sie $G_f$ auf Extrem- sowie Wendepunkte und erstellen Sie eine Monotinie- und Krümmungstabelle für $G_f$.
+  \item Ermitteln Sie eine Gleichung der Asymptote von $G_f$ und skizzieren Sie $G_f$.\\
+    Kennzeichnen Sie in Ihrer Skizze die rechtsgekrümmten Teile von $G_f$.
+  \item $G_f$ und die Winkelhalbierende des I. Quadranten beranden ein (ganz im Endlichen gelegenes) Flächenstück; berechnen Sie dessen Inhalt.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
