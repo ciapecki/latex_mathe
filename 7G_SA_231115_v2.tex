@@ -1,0 +1,254 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+
+
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{svg}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{array}
+\captionsetup{compatibility=false}
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{kolorwykresu}{rgb}{0.07,0.04,0.56}
+
+\pagenumbering{gobble}
+
+\usepackage{tabularray}
+\usepackage{multirow}
+\usepackage{booktabs,tabularx}
+
+%\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{1. Schulaufgabe aus der Mathematik}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{7G}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\newcommand*{\quadratbox}{\textbf{\fbox{\phantom{\huge{?}}}}}%
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+
+\fancyhead{}
+\fancyhead[C]{\includegraphics[height=2.5cm]{lukasLogoV2.png}
+\vspace{2cm}
+}
+
+\thispagestyle{fancy}
+
+\lhead{
+%\vspace{1cm}
+  \sf \LARGE \Fach{} %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{}   \datum{}}
+
+\vspace*{0.2cm}
+
+\vspace{4cm}
+Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sein!
+
+%\rhead{\sf \Semester{} }
+\vspace*{0.2cm}
+
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{1cm}
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+\vspace{0.8cm}
+
+\textbf{Hinweise:} Der Lösungsweg muss nachvollziehbar sein. Arbeitszeit \textbf{45 Minuten}.
+%\vspace{0,5cm}Die Rechenwege müssen nachvollziehbar sein!
+%
+%\vspace{0,5cm} {TEIL A} - ohne Hilfsmittel - Bearbeitungszeit 30 Minuten
+%\vspace {0.8cm}
+% 
+%GEOMETRIE
+
+
+\begin{center}
+  \begin{tblr}{
+      width=1\linewidth,
+      colspec = {Q[c,6em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,4em]Q[c,6em]Q[c,6em]},
+      rowspec = {Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]},
+      colsep = 0mm,
+      %row{1} = {2em,azure2,fg=white,font=\large\bfseries\sffamily},
+      row{1} = {2em,font=\large\bfseries\sffamily},
+      hlines, vlines,
+    }
+    \textbf{Aufgabe} & \textbf{1} & \textbf{2} & \textbf{3} & 
+    \textbf{4} & \textbf{5} & \textbf{6}& \textbf{Gesamt} & \textbf{Note}\\
+    {Mögliche \\ Punkte} & {5} & {3} & {6} & 4 & 6 & 2 & {26} & \\
+    {Erreichte \\ Punkte} &  &  &  &  & & & &  \\
+  \end{tblr}
+\end{center}
+
+\vspace{0.3cm}
+%\centerline{\huge\bfseries\sffamily Viel Erfolg !!!}
+
+%\newpage
+%\vspace*{-2cm}
+\Aufgabe{1: (3BE + 2BE)}
+Sophia möchte Abzüge der Fotos ihres letzten Urlaubs im Internet bestellen. Dazu vergleicht sie zwei Angebote:
+\begin{center}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        Anbieter & deinBild.com & Fotos24.de \\
+        \hline
+        Preis pro Bild & 15 Ct & 12 Ct \\
+        \hline
+        Versandkosten & 1,50\euro & 3,00\euro \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{enumerate}[label={\alph*)}]
+  \item Stelle jeweils einen Term auf, mit dem Sophia die Gesamtkosten für eine Bestellung bei den beiden Anbietern berechnen kann. Führe vorher die Variable ein.
+  \item Sophia hat viel zu viele Fotos geschossen. Deshalb sucht sie sich die 90 schönsten Fotos aus. Begründe rechnerisch, bei welchem Anbieter sie die Fotos bestellen sollte.
+\end{enumerate}
+
+\Aufgabe{2: (3BE)}
+Gliedere den Term in Textform:
+
+\[ T(x) = 4x^2 - (2+x) \]
+
+\Aufgabe{3: (4BE + 2BE)}
+Thommy behauptet: ,,Denke dir eine Zahl. Vergrößere diese um 5 und verdreifache dann das Ergebnis. Ziehe davon dann 20 ab. Addiere danach das Doppelte der Zahl und subtrahiere zum Schluss das Fünffache der Zahl. Du erhältst immer das gleiche Ergebnis, egal welche Zahl du dir ausgedacht hast.''
+
+\begin{enumerate}[label={\alph*)}]
+  \item Stelle einen Term für die gesamte Rechnung auf und vereinfache ihn soweit wie möglich.
+  \item Entscheide begründet anhand deines Terms, ob Thommy Recht hat.
+\end{enumerate}
+
+
+\Aufgabe{4: (4BE)}
+
+\begin{minipage}[t]{0.65\textwidth}
+Auf der Skizze rechts ist der Garten von Familie Moritz dargestellt (Maße in $m$). Steffan und Claudia wollen den Flächeninhalt des Gartens bestimmen. Sie stellen dafür folgende korrekte Terme auf:
+%\[ \text{Hendrick:}\  A_{1}(x;y) = 2,5\cdot x + 10\cdot (8-x)+x\cdot (7,5-y) \] 
+%\[ \text{Elena:}\  A_{2}(x;y) = 8\cdot 10-x\cdot y \]
+
+\begin{flalign}
+  & \nonumber \text{Steffan:}\  A_{1}(x;y) = 2,5\cdot x + 10\cdot (8-x)+x\cdot (7,5-y)&&\\
+  & \nonumber \text{Claudia:}\  A_{2}(x;y) = 8\cdot 10-x\cdot y&&
+\end{flalign}
+
+Erkläre die Überlegungen von Steffan und Claudia und veranschauliche sie mit unterschiedlichen Farben bzw. Hilfslinien in der Skizze.
+\end{minipage}
+\hspace*{0.75cm}
+\begin{minipage}[t]{0.35\textwidth}
+  \begin{figure}[H]
+    \vspace{-1cm}
+    \centering
+    \includegraphics[width=1\linewidth]{231115_skizze_aufg5.jpg}
+  \end{figure}
+\end{minipage}
+
+
+\Aufgabe{5: (3BE + 3BE)}
+Fasse die Terme so weit wie möglich zusammen.
+\begin{enumerate}[label={\alph*)}]
+  \item $-5+2\cdot y\cdot 5+2-(8y-3)=$
+  \item $ 2^3a-2^{-3}a-3^2a+\frac{1}{4}a=$
+\end{enumerate}
+
+
+\Aufgabe{6: (2BE)}
+Tim hat den Term $T(a) = 4a-3:a$ aufgestellt.\\ 
+Begründe, ob er für die Variable $a$ alle Zahlen aus der Menge der rationalen Zahlen einsetzen darf.
+
+\vspace{2cm}
+\centerline{Viel Erfolg \faThumbsOUp }
+\end{document}
