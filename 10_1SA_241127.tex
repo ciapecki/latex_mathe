@@ -1,0 +1,223 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+
+
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{svg}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{array}
+\captionsetup{compatibility=false}
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{kolorwykresu}{rgb}{0.07,0.04,0.56}
+
+\pagenumbering{gobble}
+
+\usepackage{tabularray}
+\usepackage{multirow}
+\usepackage{booktabs,tabularx}
+
+%\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{1. Schulaufgabe aus der Mathematik}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\newcommand*{\quadratbox}{\textbf{\fbox{\phantom{\huge{?}}}}}%
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+
+\fancyhead{}
+\fancyhead[C]{\includegraphics[height=1.5cm]{lukasLogoV2.png}
+\vspace{1cm}
+}
+
+\thispagestyle{fancy}
+
+\lhead{
+%\vspace{1cm}
+  \sf \LARGE \Fach{} %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{}   \datum{}}
+
+
+\vspace*{0.2cm}
+
+\vspace{2cm}
+Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sein!
+
+%\rhead{\sf \Semester{} }
+%\vspace*{0.2cm}
+
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{1cm}
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+%\vspace{0.8cm}
+
+%\textbf{Hinweise:} Der Lösungsweg muss nachvollziehbar sein. Arbeitszeit \textbf{45 Minuten}.
+%\vspace{0,5cm}Die Rechenwege müssen nachvollziehbar sein!
+%
+%\vspace{0,5cm} {TEIL A} - ohne Hilfsmittel - Bearbeitungszeit 30 Minuten
+%\vspace {0.8cm}
+% 
+%GEOMETRIE
+
+%\begin{center}
+%  \begin{tblr}{
+%      width=1\linewidth,
+%      colspec = {Q[c,5em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,2em]Q[c,5em]Q[c,3em]},
+%      rowspec = {Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]Q[m]},
+%      colsep = 0mm,
+%      %row{1} = {2em,azure2,fg=white,font=\large\bfseries\sffamily},
+%      row{1} = {2em,font=\large\bfseries\sffamily},
+%      hlines, vlines,
+%    }
+%    \textbf{Aufgabe} & \textbf{1} & \textbf{2} & \textbf{3} & 
+%    \textbf{4} & \textbf{5} & \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}&
+%    \textbf{Gesamt} & \textbf{Note}\\
+%    {Mögliche \\ Punkte} & 4 & 4 & 4 & 8 & 13 & 13 & 3 & 6 & 7 & 3 & 65 \\
+%    {Erreichte \\ Punkte} &  &  &  &  & & & & & & & & \\
+%  \end{tblr}
+%\end{center}
+
+%\vspace{0.3cm}
+%\newpage\null\thispagestyle{empty}\newpage
+%\newpage
+%\vspace{1,5cm} {TEIL A} - ohne Hilfsmittel. Bearbeitungszeit 25 min.
+%\vspace {0,2cm}
+
+\Aufgabe{1: (2BE+3BE+3BE+2BE)}
+Eine 1-Liter-Flasche frische Vollmilch enthält ungefähr 10mg Vitamin C, welches sich aber unter Einfluss von Licht zersetzt. Pro Stunde nimmt der Vitamin-C-Gehalt der Milch dabei um 6\% ab.\\
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Beschreibe die Abhahme des Vitamin-C-Gehalts durch einen Funktionsterm $G(n)$, der die verbleibende Vitamin-C-Menge nach $n$ verstricenen Stunden wiedergibt.  
+  \item Berechne, nach wie vielen Stunden nur noch die Hälfte der anfänglichen Menge an Vitamin C in der Milch vorhanden ist.
+  \item Bestimme den Prozentsatz, um den der Vitamin-C-Gehalt in der Milch pro Stunde abnehmen müsste, damit die verbleibende Menge an Vitamin C nach 5,5 Stunden noch 6mg beträgt.
+  \item Beurteilen Sie folgen Aussage: ,,Es gibt keinen Zeitpunkt an dem sich das Vitamin C vollständig aufgelöst hat.''
+\end{enumerate}
+
+\Aufgabe{2: (4BE+3BE)}
+Löse folgende Exponentialgleichung und gib alle Zwischenschritte an. Runde dein Ergebnis auf zwei Dezimalstellen.
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item $2^{x+3} + 2^{x-1} = 4$
+
+  \item $4^{(2x)^2} = 8$
+
+\end{enumerate}
+
+\newpage
+\Aufgabe{3: (2BE+2BE)}
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Bestimme die Variable $a$: $ log_2 a = 4 $
+  \item Schreibe den folgenden Ausdruck als Exponentialgleichung und berechne $x$: $ log_{a^{\frac{1}{2}}} a^{1,5} = x $
+
+\end{enumerate}
+
+\Aufgabe{4: (5BE+2BE)}
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Bestimme zu den beiden untenstehenden Graphen $f(x)$ und $g(x)$ jeweils eine zugehörige Funktionsvorschrift.\\
+\raisebox{-10mm}{\includegraphics[keepaspectratio = true, scale = 1.2] {20241127.png}}
+
+  \item Zeichne die Funktion $h(x) = 2 \cdot {1,5}^x$ in das obenstehende Koordinatensystem ein.
+
+\end{enumerate}
+\end{document}

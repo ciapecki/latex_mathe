@@ -1,0 +1,150 @@
+%compile with pdflatex on papeeria
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+%\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{enumitem}
+%\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Tägliche Übung aus der Mathematik (A)}
+\newcommand{\Name}{}
+\newcommand{\datum}{}
+\newcommand{\Matrikelnummer}{}
+\newcommand{\Semester}{Q12/1}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+
+\newcounter{aufgabencounter}
+\newcommand{\aufgabeNr}{\stepcounter{aufgabencounter}{\theaufgabencounter}}
+
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}{
+  {
+  \vspace*{0.5cm}
+  \textsf{\textbf{Aufgabe \aufgabeNr}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Übungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name},
+    pdfborder={0 0 0}
+}
+
+\lstset{ %
+language=java,
+basicstyle=\footnotesize\tt,
+showtabs=false,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+extendedchars=true,
+showstringspaces=false,
+flexiblecolumns=true,
+}
+
+\title{Übungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+\thispagestyle{fancy}
+%\lhead{\sf \large \Fach{} \\ %\small \Name{} - \Matrikelnummer{}
+\lhead{\sf \large \Fach{} %\small \Name{} - \Matrikelnummer{}
+}
+\rhead{\sf \Semester{}   \datum{}}
+%\rhead{\sf \Semester{} }
+\vspace*{0.2cm}
+%\begin{center}
+%%\LARGE \sf \textbf{Übungsblatt \Uebungsblatt{}}
+%\end{center}
+%\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Name: \underline{\hspace{7cm}}
+  \hfill
+  Datum: \underline{\hspace{4cm}}
+
+
+\vspace{0.5cm}
+\vspace{1cm}Die Rechenwege müssen nachvollziehbar sein!
+\vspace{0.5cm}
+
+
+\Aufgabe
+Sportverein\\
+Der Vorsitzende eines Sportvereins möchte mit Vereinsgeldern eine neue Weitsprunganlage finanzieren. Er geht dabei von einer Zustimmungsquote von 70\% unter den Vereinsmitgliedern aus. Der Kassenwart des Vereins spricht sich dagegen aus und möchte die Gelder lieber auf mehrere Abteilungen verteilen, da er mit einer Zustimmungsquote für die Weitsprunganlage von maximal 30\% rechnet.
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Der Kassenwart schlägt eine Befragung von 50 zufällig ausgewählten Mitgliedern vor. Seine Behauptung soll mit einer Wahrscheinlichkeit von höchstens 4\% irrtümlich verworfen werden. Bestimme die zugehörige Entscheidungsregel mit er nem möglichst großen Ablehnungsbereich.
+  \item Berechne die Wahrscheinlichkeit für den Fehler 2. Art unter der Annahme, dass der Vorsitzende mit seiner Behauptung Recht hat.
+\end{enumerate}
+
+
+
+\Aufgabe
+Rauchverbot in Gaststätten\\
+In der Bevölkerung wird eine Umfrage zum Thema Rauchverbot in Gaststätten durch geführt. Dabei gibt es nur die zwei Möglichkeiten, für oder gegen das Rauchverbet zu stimmen. 40\% der Befragten sind Nichtraucher ($N$), 30\% Gelegenheitsraucher ($G$) und 30\% Raucher ($R$).\\
+80\% der Nichtraucher und 50\% der Gelegenheitsraucher befürworten ein Rauchverbot ($V$), während 70\% der Raucher dagegen sind ($\overline{V}$).
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Zeichne ein Baumdiagramm.
+  \item Beschreibe $P_N(V)$ und $P(N\cap V)$ in Worten und gib ihren Wert an.
+  \item Wie viel Prozent der Befragten sind für ein Rauchverbot?
+  \item Mit welcher Wahrscheinlichkeit stammt eine für das Rauchverbot abgegebene Stimme von einem Gelegenheitsraucher?
+  \item Mit welcher Wahrscheinlichkeit stammt eine gegen das Rauchverbot abgegebene Stimme von einem Raucher?
+  \item Das Gesundheitsministenum startet eine Kampagne zur Aufklärung über die Gefahren des Rauchens. Angenommen, diese ändert nur das Abstimmungsverhalten der Gelegenheitsraucher. Wie muss sich $P_G(V)$ ändern, damit die Zustimmung zum Rauchverbot in Gaststätten auf 65\% steigt?
+\end{enumerate}
+
+\newpage
+
+
+\begin{figure}[h!tp]
+\vspace*{-0.66cm}
+\makebox[\textwidth][c]{\includegraphics[width=0.8\textwidth]{Q12_TÜ_240124_1.jpg}}
+\end{figure}
+
+\begin{figure}[h!tp]
+\vspace*{-0.66cm}
+\makebox[\textwidth][c]{\includegraphics[width=0.8\textwidth]{Q12_TÜ_240124_2.jpg}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
