@@ -29,6 +29,12 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{subcaption}
+
+%\makeatletter
+%\@ifundefined{c@rownum}{}{\let\c@rownum\relax}
+%\makeatother
+%\usepackage[table]{xcolor} % For coloring table cells
+%\usepackage{colortbl}
 \usepackage{array}
 \captionsetup{compatibility=false}
 \captionsetup[subfigure]{labelformat=empty}
@@ -113,9 +119,9 @@ flexiblecolumns=true,
 \begin{document}
 
 \fancyhead{}
-\fancyhead[C]{\includegraphics[height=1.5cm]{lukasLogoV2.png}
+%\fancyhead[C]{\includegraphics[height=1.5cm]{lukasLogoV2.png}
 \vspace{1cm}
-}
+%}
 
 \thispagestyle{fancy}
 
@@ -126,9 +132,9 @@ flexiblecolumns=true,
 \rhead{\sf \Semester{}   \datum{}}
 
 
-\vspace*{0.2cm}
+\vspace*{-0.2cm}
 
-\vspace{2cm}
+%\vspace{2cm}
 Alle Lösungen müssen mit Nebenrechnungen und Begründungen nachvollziehbar sein!
 
 %\rhead{\sf \Semester{} }
@@ -202,7 +208,7 @@ Löse folgende Exponentialgleichung und gib alle Zwischenschritte an. Runde dein
 
 \end{enumerate}
 
-\newpage
+%\newpage
 \Aufgabe{3: (2BE+2BE)}
 
 \begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
@@ -218,6 +224,32 @@ Löse folgende Exponentialgleichung und gib alle Zwischenschritte an. Runde dein
 \raisebox{-10mm}{\includegraphics[keepaspectratio = true, scale = 1.2] {20241127.png}}
 
   \item Zeichne die Funktion $h(x) = 2 \cdot {1,5}^x$ in das obenstehende Koordinatensystem ein.
-
 \end{enumerate}
+
+\Aufgabe{5: (4BE+2BE)}
+Das Bevölkerungswachstum in den USA von 1860 bis 1920 ist in der Tabelle dargestellt.
+\begin{table}[h!]
+  \centering
+  %\renewcommand{\arraystretch}{1.5} % Adjust row height if needed
+  \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+    \hline
+    % Data rows
+    Jahr & 1860 & 1870 & 1880 & 1890 & 1900 & 1920 & 1920 \\
+    \hline
+    Bevölkerungsanzahl (in Mio.)&31,43&39,82&50,16&62,95&75,99&91,92&105,71 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{enumerate}[label={\alph*)}, topsep=5pt,itemsep=4ex,partopsep=1ex,parsep=1ex]
+  \item Bestimme eine lineare und eine xponentielle Modellfunktion für die Bevölkerungsentwicklung in den USA.
+  \item Beurteile beide Modelle unter berücksichtigung der Tatsache, dass die USA im Jahr 1790 etwa 3,93 Millionen Einwohner hatten.
+\end{enumerate}
+
+\vspace{10mm}
+\begin{center}
+Viel Erfolg
+\end{center}
+
 \end{document}
